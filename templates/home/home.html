@@ -1,7 +1,17 @@
-{% extends 'base.html' %}
+{# Load the tag library #}
+{% load bootstrap3 %}
 
-{% block title %} 아름다운서당 {% endblock %}
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+#{% bootstrap_javascript %}
 
-{% block content %}
-아름다운 서당 홈페이지 입니다.
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+{% block title %}아름다운 서당{% endblock %}
+
+{% block bootstrap3_content %}
+    {% include 'home/navbar.html' %}
+    This is <em>bootstrap3</em> for <strong>Django</strong>.
 {% endblock %}

@@ -131,11 +131,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
-    #os.path.join(BASE_DIR, 'static_dir')
+    os.path.join(BASE_DIR, 'static')
 )
-
-
-
 
 
 # Django all auth settings
@@ -168,19 +165,19 @@ BOOTSTRAP3 = {
     'javascript_url': None,
 
     # Put JavaScript in the HEAD section of the HTML document (only relevant if you use bootstrap3.html)
-    'javascript_in_head': False,
+    'javascript_in_head': True,
 
     # Include jQuery with Bootstrap JavaScript (affects django-bootstrap3 template tags)
-    'include_jquery': False,
+    'include_jquery': True,
 
     # Label class to use in horizontal forms
-    'horizontal_label_class': 'col-md-3',
+    # 'horizontal_label_class': 'col-md-3',
 
     # Field class to use in horizontal forms
-    'horizontal_field_class': 'col-md-9',
+    # 'horizontal_field_class': 'col-md-9',
 
     # Set HTML required attribute on required fields
-    'set_required': True,
+    'set_required': False,
 
     # Set HTML disabled attribute on disabled fields
     'set_disabled': False,

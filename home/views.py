@@ -15,7 +15,8 @@ class MyView(View):
 class HomePageView(TemplateView):
     template_name = 'home/home.html'
 
-    def get_context_data(self, **kwargs):
-        context = super(HomePageView, self).get_context_data(**kwargs)
-        messages.info(self.request, 'hello http://example.com')
-        return context
+    #def get_context_data(self, **kwargs):
+    #    context = super(HomePageView, self).get_context_data(**kwargs)
+    #    messages.info(self.request, 'hello http://example.com')
+    #    return context
+

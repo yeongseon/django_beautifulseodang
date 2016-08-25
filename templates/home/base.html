@@ -1,8 +1,14 @@
-{% extends 'bootstrap3' %}
+{% extends 'home/bootstrap.html' %}
+{% load bootstrap3 %}
 
-{% block bootstrap3_title %}
-{% block title %}
+{% block bootstrap3_content %}
+    <div class="container">
+        <h1>{% block title %}(no title){% endblock %}</h1>
+
+
+        {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
+
+        {% block content %}(no content){% endblock %}
+    </div>
+
 {% endblock %}
-{% endblock %}
-
-

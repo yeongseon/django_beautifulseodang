@@ -1,0 +1,31 @@
+/*
+ * Sticky footer styles
+ */
+html {
+  font-family: 'Noto Sans', sans-serif;
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  padding: 0;
+  padding-top: 50px;
+  font-family: 'Noto Sans', sans-serif;
+  color: #444;
+}
+.starter-template {
+  padding: 20px 15px;
+  text-align: center;
+}
+.footer {
+  position: absolute;
+  text-align: left;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 90px;
+  background-color: #f5f5f5;
+}
