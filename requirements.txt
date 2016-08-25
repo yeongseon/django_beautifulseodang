@@ -1,1 +1,9 @@
+defusedxml==0.4.1
 Django==1.8.14
+django-allauth==0.27.0
+django-bootstrap-form==3.2.1
+django-bootstrap3==7.0.1
+oauthlib==1.1.2
+python3-openid==3.0.10
+requests==2.11.1
+requests-oauthlib==0.6.2
