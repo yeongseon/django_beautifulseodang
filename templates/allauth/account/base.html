@@ -1,4 +1,7 @@
 {% extends 'account/bootstrap.html' %}
+
+{% load i18n %}
+
 {# Load the tag library #}
 {% load bootstrap3 %}
 
@@ -6,10 +9,9 @@
 {% bootstrap_css %}
 {% bootstrap_javascript %}
 
-{% load i18n %}
-
 {% block bootstrap3_content %}
 {% block content %}
+{% include 'home/navbar.html' %}
 
 <h1>{% trans 'My Account' %}</h1>
 
@@ -27,8 +29,9 @@
   </li>
   {% endif %}
 </ul>
-{% block account_content %}
-{% endblock %}
+
+{% block account_content %} {% endblock %}
 {% endblock %}
 
+{% include 'home/footer.html' %}
 {% endblock %}
