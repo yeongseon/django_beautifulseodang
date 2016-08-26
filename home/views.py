@@ -20,3 +20,5 @@ class HomePageView(TemplateView):
     #    messages.info(self.request, 'hello http://example.com')
     #    return context
 
+class AboutView(TemplateView):
+    template_name = 'introduction/about.html'
