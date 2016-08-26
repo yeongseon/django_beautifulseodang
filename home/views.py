@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.views.generic import View
 
 from django.views.generic import TemplateView
-from django.contrib import messages
+from allauth.account.views import SignupView, LoginView, LogoutView
 
 # Create your views here.
 
@@ -22,3 +22,15 @@ class HomePageView(TemplateView):
 
 class AboutView(TemplateView):
     template_name = 'introduction/about.html'
+
+class ProfileView(TemplateView):
+    template_name = 'plane/profile.html'
+
+class SignupView(SignupView):
+    template_name = 'allauth/account/signup.html'
+
+class LoginView(LoginView):
+    template_name = 'allauth/account/login.html'
+
+class LogoutView(LogoutView):
+    template_name = 'allauth/account/logout.html'

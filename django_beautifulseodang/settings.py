@@ -16,10 +16,6 @@ import sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Include BOOTSTRAP3_FOLDER in path
-#BOOTSTRAP3_FOLDER = os.path.abspath(os.path.join(BASE_DIR, '..', 'bootstrap3'))
-#if BOOTSTRAP3_FOLDER not in sys.path:
-#    sys.path.index(0, BOOTSTRAP3_FOLDER)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -31,7 +27,6 @@ SECRET_KEY = 'ukm)tbc+e%#gew3^%wxyk%@@e9&g%3(@zq&crilwlbvh@6n*l$'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -49,7 +44,6 @@ INSTALLED_APPS = (
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-
     #'allauth.socialaccount.providers.facebook',
     #'allauth.socialaccount.providers.google',
     #'allauth.socialaccount.providers.instagram',
@@ -60,10 +54,10 @@ INSTALLED_APPS = (
     'bootstrap3',
     'bootstrapform',
 
-
     # home
     'home',
 )
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -81,15 +75,26 @@ ROOT_URLCONF = 'django_beautifulseodang.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR+'/templates', ],
-        'APP_DIRS': True,
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+        ],
+        # 'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'loaders': [
+                # APP_DIRS를 주석처리 해야지 동작
+                'django.template.loaders.filesystem.Loader',
+                'django.template.loaders.app_directories.Loader',
+            ]
         },
     },
 ]
@@ -135,74 +140,15 @@ STATICFILES_DIRS = (
 )
 
 
-# Django all auth settings
-AUTHENTICATION_BACKENDS = (
-    # Needed to login by username in Django admin, regardless of `allauth`
-    'django.contrib.auth.backends.ModelBackend',
+try:
+    from .allauth_settings import *
+except ImportError:
+    print("ImportError")
+    pass
 
-    # `allauth` specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
-)
+try:
+    from .bootstrap3_settings import *
+except ImportError:
+    print("ImportError")
+    pass
 
-SITE_ID = 1
-
-
-# Setting for django-bootstrap3
-BOOTSTRAP3 = {
-    # The URL to the jQuery JavaScript file
-    'jquery_url': '//code.jquery.com/jquery.min.js',
-
-    # The Bootstrap base URL
-    'base_url': '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/',
-
-    # The complete URL to the Bootstrap CSS file (None means derive it from base_url)
-    'css_url': None,
-
-    # The complete URL to the Bootstrap CSS file (None means no theme)
-    'theme_url': None,
-
-    # The complete URL to the Bootstrap JavaScript file (None means derive it from base_url)
-    'javascript_url': None,
-
-    # Put JavaScript in the HEAD section of the HTML document (only relevant if you use bootstrap3.html)
-    'javascript_in_head': True,
-
-    # Include jQuery with Bootstrap JavaScript (affects django-bootstrap3 template tags)
-    'include_jquery': True,
-
-    # Label class to use in horizontal forms
-    # 'horizontal_label_class': 'col-md-3',
-
-    # Field class to use in horizontal forms
-    # 'horizontal_field_class': 'col-md-9',
-
-    # Set HTML required attribute on required fields
-    'set_required': False,
-
-    # Set HTML disabled attribute on disabled fields
-    'set_disabled': False,
-
-    # Set placeholder attributes to label if no placeholder is provided
-    'set_placeholder': True,
-
-    # Class to indicate required (better to set this in your Django form)
-    'required_css_class': '',
-
-    # Class to indicate error (better to set this in your Django form)
-    'error_css_class': 'has-error',
-
-    # Class to indicate success, meaning the field has valid input (better to set this in your Django form)
-    'success_css_class': 'has-success',
-
-    # Renderers (only set these if you have studied the source and understand the inner workings)
-    'formset_renderers':{
-        'default': 'bootstrap3.renderers.FormsetRenderer',
-    },
-    'form_renderers': {
-        'default': 'bootstrap3.renderers.FormRenderer',
-    },
-    'field_renderers': {
-        'default': 'bootstrap3.renderers.FieldRenderer',
-        'inline': 'bootstrap3.renderers.InlineFieldRenderer',
-    },
-}
