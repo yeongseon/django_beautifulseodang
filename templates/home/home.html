@@ -1,17 +1,11 @@
-{# Load the tag library #}
+{% extends 'home/base.html' %}
 {% load bootstrap3 %}
 
-{# Load CSS and JavaScript #}
-{% bootstrap_css %}
-#{% bootstrap_javascript %}
+{% block content %}
+{% include 'home/navbar.html' %}
 
+{% include 'home/carousel.html' %}
+<em>아름다운 서당</em> 홈페이지 <strong>만들기</strong>.
 
-{# Display django.contrib.messages as Bootstrap alerts #}
-{% bootstrap_messages %}
-
-{% block title %}아름다운 서당{% endblock %}
-
-{% block bootstrap3_content %}
-    {% include 'home/navbar.html' %}
-    This is <em>bootstrap3</em> for <strong>Django</strong>.
+{% include 'home/footer.html' %}
 {% endblock %}

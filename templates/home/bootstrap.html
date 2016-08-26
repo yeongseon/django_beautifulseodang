@@ -1,10 +1,3 @@
-{# Load the tag library #}
-{% load bootstrap3 %}
+{% extends 'bootstrap3/bootstrap3.html' %}
 
-{# Load CSS and JavaScript #}
-{% bootstrap_css %}
-{% bootstrap_javascript %}
-
-
-{# Display django.contrib.messages as Bootstrap alerts #}
-{% bootstrap_messages %}
+{% block bootstrap3_title %}{% block title %}아름다운 서당{% endblock %}{% endblock %}

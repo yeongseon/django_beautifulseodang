@@ -1,4 +1,4 @@
-defusedxml==0.4.1
+/vdefusedxml==0.4.1
 Django==1.8.14
 django-allauth==0.27.0
 django-bootstrap-form==3.2.1
