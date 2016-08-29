@@ -26,6 +26,8 @@ AUTH_PASSWORD_VALIDATORS = [
     }
 ]
 
+LOGIN_REDIRECT_URL = '/'
+ACCOUNT_FORMS = {'login': 'home.forms.MyLoginForm'}
 
 # django-allauth Configuration variables you might like to change.
 #
@@ -35,7 +37,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Specifies the login method to use -- whether the user logs in by entering
 # their username, e-mail address, or either one of both. Possible values
 # are 'username' | 'email' | 'username_email'
-# ACCOUNT_AUTHENTICATION_METHOD
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
 
 # The URL to redirect to after a successful e-mail confirmation, in case no
 # user is logged in. Default value is settings.LOGIN_URL.
@@ -49,7 +51,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 3
 
 # The user is required to hand over an e-mail address when signing up.
-# ACCOUNT_EMAIL_REQUIRED = False
+ACCOUNT_EMAIL_REQUIRED = True
 
 # Determines the e-mail verification method during signup. When set to
 # "mandatory" the user is blocked from logging in until the email

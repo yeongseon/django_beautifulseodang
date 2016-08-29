@@ -8,41 +8,38 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block account_content %}
-
-<h1>{% trans "Sign In" %}</h1>
+<h1>{% trans "로그인" %}</h1>
 
 {% get_providers as socialaccount_providers %}
 {% if socialaccount_providers %}
 <p>{% blocktrans with site.name as site_name %}Please sign in with one
-of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-for a {{ site_name }} account and sign in
-below:{% endblocktrans %}</p>
+    of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+    for a {{ site_name }} account and sign in
+    below:{% endblocktrans %}</p>
 
 <div class="socialaccount_ballot">
 
-  <ul class="socialaccount_providers">
-    {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-  </ul>
+    <ul class="socialaccount_providers">
+        {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+    </ul>
 
-  <div class="login-or">{% trans 'or' %}</div>
+    <div class="login-or">{% trans 'or' %}</div>
 
 </div>
 
 {% include "socialaccount/snippets/login_extra.html" %}
-
 {% endif %}
 
-<form class="login" method="POST" action="{% url 'account_login' %}">
-  {% csrf_token %}
-  {{ form|bootstrap }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <div class="form-actions">
-    <button class="btn btn-primary" type="submit">{% trans "Sign In" %}</button>
-    <a class="btn" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-
-  </div>
+<form class="form-signin" method="POST" action="{% url 'account_login' %}">
+    {% csrf_token %}
+    {{ form|bootstrap }}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <div class="form-actions">
+        <button class="btn btn-primary" type="submit">{% trans "로그인" %}</button>
+        <a class="btn" href="{% url 'account_reset_password' %}">{% trans "비밀번호 찾기" %}</a>
+    </div>
 </form>
 
 {% endblock %}
