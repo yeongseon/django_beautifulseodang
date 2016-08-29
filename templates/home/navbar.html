@@ -1,51 +1,52 @@
 {% block navbar %}
-<div class="navbar-wrapper">
+<!-- <div class="navbar-wrapper"> -->
+<!-- <div class="container"> -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/home">아름다운 서당</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 소개 <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="/introduction/about">아름다운서당은</a><li>
-                                <li><a href="/">대표인사말</a><li>
-                                <li><a href="/">연혁</a><li>
-                                <li><a href="/">함께하는사람들</a><li>
-                                <li><a href="/">찾아오는길</a><li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 교육 <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="/">교육 목적</a><li>
-                                <li><a href="/">교육 기간</a><li>
-                                <li><a href="/">교육 특징</a><li>
-                            </ul>
-                        </li>
-                        <li><a href="/">제목없음</a><li>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/home">아름다운 서당</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 소개 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/introduction/about">아름다운서당은</a><li>
+                        <li><a href="/introduction/greeting">대표인사말</a><li>
+                        <li><a href="/introduction/timeline">연혁</a><li>
+                        <li><a href="/introduction/people">함께하는사람들</a><li>
+                        <li><a href="/introduction/news">언론보도</a><li>
+                        <li><a href="/">찾아오는길</a><li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        {% if user.is_authenticated %}
-                        <li><a href="/accounts/logout">로그아웃</a><li>
-                        {% else %}
-                        <li><a href="/accounts/signup">회원가입</a><li>
-                        <li><a href="/accounts/login">로그인</a><li>
-                        {% endif %}
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 교육 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/">교육 목적</a><li>
+                        <li><a href="/">교육 기간</a><li>
+                        <li><a href="/">교육 특징</a><li>
                     </ul>
-                </div>
-            </div>
-        </nav>
+                </li>
+                <li><a href="/">제목없음</a><li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {% if user.is_authenticated %}
+                <li><a href="/accounts/logout">로그아웃</a><li>
+                {% else %}
+                <li><a href="/accounts/signup">회원가입</a><li>
+                <li><a href="/accounts/login">로그인</a><li>
+                {% endif %}
+            </ul>
+        </div>
     </div>
-</div>
+</nav>
+<!-- </div> -->
+<!-- </div> -->
 
 {% endblock navbar %}

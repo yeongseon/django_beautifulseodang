@@ -14,17 +14,20 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from home.views import HomePageView, AboutView, ProfileView, LoginView, LogoutView
+from home.views import HomePageView, AboutView, ProfileView, GreetingView, \
+    TimelineView, PeopleView, NewsView
 
 urlpatterns = [
     url(r'^$', HomePageView.as_view(), name='home'),
     url(r'^(home)', HomePageView.as_view(), name='home'),
     url(r'^introduction/about/', AboutView.as_view(), name='about'),
+    url(r'^introduction/greeting/', GreetingView.as_view(), name='greeting'),
+    url(r'^introduction/timeline/', TimelineView.as_view(), name='timeline'),
+    url(r'^introduction/people/', PeopleView.as_view(), name='people'),
+    url(r'^introduction/news/', NewsView.as_view(), name='news'),
 
     url(r'^accounts/', include('allauth.urls')),
     url(r'^accounts/profile/$', ProfileView.as_view(), name='profile'),
-    #url(r'^accounts/login/', LoginView.as_view(), name='login'),
-    #url(r'^accounts/logout/', LogoutView.as_view(), name='logout'),
 
     url(r'^admin/', include(admin.site.urls)),
 ]

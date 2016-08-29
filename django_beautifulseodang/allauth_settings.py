@@ -27,7 +27,10 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 LOGIN_REDIRECT_URL = '/'
-ACCOUNT_FORMS = {'login': 'home.forms.MyLoginForm'}
+ACCOUNT_FORMS = {
+    'login': 'home.forms.MyLoginForm',
+    'signup': 'home.forms.MySignupForm'
+}
 
 # django-allauth Configuration variables you might like to change.
 #

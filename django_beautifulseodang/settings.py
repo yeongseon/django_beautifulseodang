@@ -139,7 +139,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'collected_statics')
+STATIC_ROOT = os.path.join(BASE_DIR, 'statics')
 
 try:
     from .allauth_settings import *

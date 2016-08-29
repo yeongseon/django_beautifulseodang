@@ -4,22 +4,22 @@
 
 {% load bootstrap %}
 
-{% block head_title %}{% trans "Signup" %}{% endblock %}
+{% block head_title %}{% trans "가입하기" %}{% endblock %}
 
 {% block account_content %}
-<h1>{% trans "Sign Up" %}</h1>
+<h1>{% trans "가입하기" %}</h1>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+<p>{% blocktrans %}이미 가입하셨나요? 그러면 <a href="{{ login_url }}">로그인</a>.{% endblocktrans %}</p>
 
-<form id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form|bootstrap }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <div class="form-actions">
-    <button class="btn btn-primary" type="submit">{% trans "Sign Up" %}</button>
-  </div>
+<form class="form-signin" method="POST" action="{% url 'account_signup' %}">
+    {% csrf_token %}
+    {{ form|bootstrap }}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <div class="form-actions">
+        <button class="btn btn-primary" type="submit">{% trans "가입하기" %}</button>
+    </div>
 </form>
 
 {% endblock %}

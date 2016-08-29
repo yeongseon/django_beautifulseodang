@@ -23,23 +23,23 @@
 
         <!--<h1>{% trans 'My Account' %}</h1>-->
         <!--<ul class="nav nav-tabs">-->
-            <!--<li class="{% block account_nav_email %}{% endblock %}">-->
-                <!--<a href="{% url 'account_email' %}">{% trans 'E-mail Addresses' %}</a>-->
-            <!--</li>-->
-            <!--<li class="{% block account_nav_change_password %}{% endblock %}">-->
-                <!--<a href="{% url 'account_change_password' %}">{% trans 'Change Password' %}</a>-->
-            <!--</li>-->
-            <!--{% url 'socialaccount_connections' as connections_url %}-->
-            <!--{% if connections_url %}-->
-            <!--<li class="{% block account_nav_socialaccount_connections %}{% endblock %}">-->
-                <!--<a href="{{ connections_url }}">{% trans 'Connected Accounts' %}</a>-->
-            <!--</li>-->
-            <!--{% endif %}-->
+        <!--<li class="{% block account_nav_email %}{% endblock %}">-->
+        <!--<a href="{% url 'account_email' %}">{% trans 'E-mail Addresses' %}</a>-->
+        <!--</li>-->
+        <!--<li class="{% block account_nav_change_password %}{% endblock %}">-->
+        <!--<a href="{% url 'account_change_password' %}">{% trans 'Change Password' %}</a>-->
+        <!--</li>-->
+        <!--{% url 'socialaccount_connections' as connections_url %}-->
+        <!--{% if connections_url %}-->
+        <!--<li class="{% block account_nav_socialaccount_connections %}{% endblock %}">-->
+        <!--<a href="{{ connections_url }}">{% trans 'Connected Accounts' %}</a>-->
+        <!--</li>-->
+        <!--{% endif %}-->
         <!--</ul>-->
-        <div class="col-lg-4">
-            {% block account_content %} {% endblock %}
-            {% endblock %}
-        </div>
+
+        {% block account_content %} {% endblock %}
+        {% endblock %}
+
     </div>
 </div>
 {% include 'home/footer.html' %}

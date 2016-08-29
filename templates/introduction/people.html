@@ -1,0 +1,42 @@
+{% extends 'home/base.html' %}
+{% load bootstrap3 %}
+
+{% block content %}
+{% include 'home/navbar.html' %}
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+
+    <!-- START THE FEATURETTES -->
+
+
+    <h2 class="featurette-heading">함께하는 사람들 </h2>
+    <br/>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <h3>서재경 / 이사장</h3>
+            <p>전 대우부사장, 전국경제인연합회 회장보자역, 서울신용보증재단 이사상</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <h3>김수종 / 이사</h3>
+            <p>전 한국일보주필, 정보통신윤리위원회 위원, 프리랜서 칼럼니스트</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <h3>김흥숙 / 이사</h3>
+            <p>시인, 칼럼니스트</p>
+        </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+    <!-- /END THE FEATURETTES -->
+
+</div><!-- /.container -->
+
+{% include 'home/footer.html' %}
+{% endblock %}

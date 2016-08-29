@@ -8,10 +8,6 @@ from allauth.account.views import SignupView, LoginView, LogoutView
 
 # Create your views here.
 
-class MyView(View):
-    def get(self, request):
-        return HttpResponse('result')
-
 class HomePageView(TemplateView):
     template_name = 'home/home.html'
 
@@ -22,6 +18,18 @@ class HomePageView(TemplateView):
 
 class AboutView(TemplateView):
     template_name = 'introduction/about.html'
+
+class GreetingView(TemplateView):
+    template_name = 'introduction/greeting.html'
+
+class TimelineView(TemplateView):
+    template_name = 'introduction/timeline.html'
+
+class PeopleView(TemplateView):
+    template_name = 'introduction/people.html'
+
+class NewsView(TemplateView):
+    template_name = 'introduction/news.html'
 
 class ProfileView(TemplateView):
     template_name = 'plane/profile.html'
