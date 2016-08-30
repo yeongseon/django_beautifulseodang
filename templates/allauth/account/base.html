@@ -19,7 +19,7 @@
 {% block content %}
 {% include 'home/navbar.html' %}
 <div class="container marketing">
-    <div class="featurette-divider">
+    <hr class="featurette-divider">
 
         <!--<h1>{% trans 'My Account' %}</h1>-->
         <!--<ul class="nav nav-tabs">-->
@@ -40,7 +40,6 @@
         {% block account_content %} {% endblock %}
         {% endblock %}
 
-    </div>
 </div>
 {% include 'home/footer.html' %}
 {% endblock %}

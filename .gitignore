@@ -1,6 +1,7 @@
 .DS_Store
 collected_statics/
 statics/
+*/migrations/*
 
 # DB
 db.sqlite3

@@ -5,8 +5,32 @@
 {% include 'home/navbar.html' %}
 
 {% include 'home/carousel.html' %}
-<div content="">
+<div class="container">
+    <div class="col-xs-12 col-md-8"> 공지사항
+        <div class="table-responsive">
 
+            <table class="table">
+                <tr>
+                    <th>날짜</th>
+                    <th>제목</th>
+                    <th>글쓴이</th>
+                </tr>
+                <tbody>
+                {% for post in post_list %}
+                <tr>
+                    <td> {{ post.date }}</td>
+                    <td> {{ post.title }}</td>
+                    <td> {{ post.auth }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4
+
+    </div>
 </div>
 
 {% include 'home/footer.html' %}
