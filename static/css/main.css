@@ -1,19 +1,35 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
-body {
-  padding-bottom: 40px;
-  color: #5a5a5a;
+html {
+  position: relative;
+  min-height: 100%;
 }
-
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
 .footer {
   position: absolute;
-  #bottom: 0;
+  bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #f5f5f5;
 }
 
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
 /* Custom auth
 -------------------------------------------------- */
 .form-signin {
@@ -148,7 +164,7 @@ body {
 ------------------------- */
 
 .featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+  margin: 40px 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
