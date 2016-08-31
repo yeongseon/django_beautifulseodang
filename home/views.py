@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from django.http import HttpResponse
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
 from allauth.account.views import SignupView, LoginView, LogoutView
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
@@ -13,10 +13,14 @@ class HomePageView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(HomePageView, self).get_context_data(**kwargs)
-        page_data = Paginator(Post.objects.all(), 5)
-
         context['post_list'] = Post.objects.all()
         return context
+
+class HomePageListView(ListView):
+    template_name = 'home/home.html'
+    model = Post
+    paginate_by = 5
+
 
 class AboutView(TemplateView):
     template_name = 'introduction/about.html'

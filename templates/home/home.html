@@ -1,5 +1,6 @@
 {% extends 'home/base.html' %}
 {% load bootstrap3 %}
+{% load bootstrap_pagination %}
 
 {% block content %}
 {% include 'home/navbar.html' %}
@@ -16,7 +17,7 @@
                     <th>글쓴이</th>
                 </tr>
                 <tbody>
-                {% for post in post_list %}
+                {% for post in object_list %}
                 <tr>
                     <td> {{ post.date }}</td>
                     <td> {{ post.title }}</td>
@@ -26,6 +27,8 @@
                 </tbody>
             </table>
         </div>
+
+        {% include 'home/pagination.html' %}
     </div>
 
     <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4

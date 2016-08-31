@@ -53,6 +53,7 @@ INSTALLED_APPS = (
     # Bootstrap
     'bootstrap3',
     'bootstrapform',
+    'bootstrap_pagination',
 
     # home
     'home',
