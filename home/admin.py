@@ -3,4 +3,7 @@ from .models import Post
 
 # Register your models here.
 
-admin.site.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    fields = ['title', 'body']
+
+admin.site.register(Post, PostAdmin)
