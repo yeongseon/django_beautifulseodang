@@ -1,6 +1,8 @@
 {% extends 'home/bootstrap.html' %}
 {# Load the tag library #}
 {% load bootstrap3 %}
+{% load fontawesome %}
+
 
 {# Load CSS and JavaScript #}
 {% bootstrap_css %}
@@ -13,6 +15,7 @@
 
 {% block bootstrap3_extra_head %}
 <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+{% fontawesome_stylesheet %}
 {% endblock %}
 
 {% block bootstrap3_content %}

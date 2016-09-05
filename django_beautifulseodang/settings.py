@@ -55,6 +55,12 @@ INSTALLED_APPS = (
     'bootstrapform',
     'bootstrap_pagination',
 
+    # Social Share
+    'django_social_share',
+
+    # Fontawesome
+    'fontawesome',
+
     # home
     'home',
 )
@@ -101,7 +107,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'django_beautifulseodang.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
