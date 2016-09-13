@@ -50,6 +50,10 @@ INSTALLED_APPS = (
     #'allauth.socialaccount.providers.linkedin',
     #'allauth.socialaccount.providers.twitter',
 
+    # ckeditor
+    'ckeditor',
+    'ckeditor_uploader',
+
     # Bootstrap
     'bootstrap3',
     'bootstrapform',
@@ -128,7 +132,7 @@ TEMPLATE_DIR = (
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr' # 기본 한글
 
 TIME_ZONE = 'Asia/Seoul'
 
@@ -149,6 +153,19 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'statics')
+
+# ckeditor
+MEDIA_URL = '/media/'
+
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': None,
+    }
+}
 
 try:
     from .allauth_settings import *

@@ -30,4 +30,6 @@ urlpatterns = [
     url(r'^accounts/profile/$', ProfileView.as_view(), name='profile'),
 
     url(r'^admin/', include(admin.site.urls)),
+
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]
