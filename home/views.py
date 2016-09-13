@@ -21,7 +21,6 @@ class HomePageListView(ListView):
     model = Post
     paginate_by = 5
 
-
 class AboutView(TemplateView):
     template_name = 'introduction/about.html'
 

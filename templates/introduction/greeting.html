@@ -1,6 +1,6 @@
 {% extends 'home/base.html' %}
 {% load bootstrap3 %}
-
+{% load social_widgets %}
 {% block content %}
 {% include 'home/navbar.html' %}
 
@@ -31,8 +31,12 @@
         <br/>
         <br/>
         <p class=pull-right">이사장 서재경</p>
-    </div>
 
+
+        {% social_widget_render "facebook/share_button.html" href="developers.facebook.com" %}
+        {% social_widget_render "twitter/share_button.html" href="http://www.twitter.com" %}
+
+    </div>
 
     <!-- /END THE FEATURETTES -->
 

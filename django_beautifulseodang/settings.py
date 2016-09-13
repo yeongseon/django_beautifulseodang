@@ -58,6 +58,9 @@ INSTALLED_APPS = (
     # Social Share
     'django_social_share',
 
+    # Social Widgets
+    'social_widgets',
+
     # Fontawesome
     'fontawesome',
 
