@@ -26,6 +26,10 @@ urlpatterns = [
     url(r'^introduction/people/', PeopleView.as_view(), name='people'),
     url(r'^introduction/news/', NewsView.as_view(), name='news'),
 
+    url(r'^education/feature/', NewsView.as_view(), name='feature'),
+    url(r'^education/period/', NewsView.as_view(), name='period'),
+    url(r'^education/purpose/', NewsView.as_view(), name='purpose'),
+
     url(r'^accounts/', include('allauth.urls')),
     url(r'^accounts/profile/$', ProfileView.as_view(), name='profile'),
 
