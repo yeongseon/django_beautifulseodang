@@ -31,6 +31,7 @@ body {
 .container .text-muted {
     margin: 20px 0;
 }
+
 /* Custom auth
 -------------------------------------------------- */
 .form-signin {
@@ -78,18 +79,6 @@ body {
     border-top-right-radius: 0;
 }
 
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-.container {
-    width: auto;
-    max-width: 680px;
-    padding: 0 15px;
-}
-.container .text-muted {
-    margin: 20px 0;
-}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -152,6 +141,11 @@ body {
     margin-bottom: 20px;
     text-align: center;
 }
+.marketing .col-lg-3 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 .marketing h2 {
     font-weight: normal;
 }
