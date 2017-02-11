@@ -12,11 +12,16 @@
 
     <hr class="featurette-divider">
 
-    <div class="jumbotron">
-        <h1>대표인사말</h1>
-    </div>
+        <div class="jumbotron">
+            <h1>대표인사말</h1>
+        </div>
+
 
     <div class="container">
+        <!--
+        <h1>대표인사말</h1>
+        -->
+        <br/>
         <p class="lead">아름다운서당은 사회가 환영하는 인재를 육성하고 있습니다.</p>
         <p >후진 양성에 뜻을 두고, 2005년 '아름다운서당'을 설립하였습니다.</p>
         <br/>
@@ -30,12 +35,30 @@
         <p >아름다운 서당이 삶의 좋은 암묵지를 나누고 배우는 공간이 되기를 기대합니다.</p>
         <br/>
         <br/>
-        <p class=pull-right">이사장 서재경</p>
+        <p class="pull-right">이사장 서재경</p>
+        <br/>
 
+        <ul class="list-unstyled list-inline list-social-icons">
+            <li>
+                {% social_widget_render "facebook/share_button.html" href="developers.facebook.com"%}
+                <a href="developers.facebook.com"><i class="fa fa-facebook-square fa-2x"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
+            </li>
+        </ul>
 
-        {% social_widget_render "facebook/share_button.html" href="developers.facebook.com" %}
+        <br/>
+
+        <!--
         {% social_widget_render "twitter/share_button.html" href="http://www.twitter.com" %}
-
+        -->
     </div>
 
     <!-- /END THE FEATURETTES -->
