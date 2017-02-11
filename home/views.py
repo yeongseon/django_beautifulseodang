@@ -36,8 +36,27 @@ class PeopleView(TemplateView):
 class NewsView(TemplateView):
     template_name = 'introduction/news.html'
 
+# Education
+
+class ContentView(TemplateView):
+    template_name = 'education/content.html'
+
+class CurriculumView(TemplateView):
+    template_name = 'education/curriculum.html'
+
+class FeatureView(TemplateView):
+    template_name = 'education/feature.html'
+
+class PeriodView(TemplateView):
+    template_name = 'education/period.html'
+
+class PurposeView(TemplateView):
+    template_name = 'education/purpose.html'
+
 class ProfileView(TemplateView):
     template_name = 'plane/profile.html'
+
+#
 
 class SignupView(SignupView):
     template_name = 'allauth/account/signup.html'
