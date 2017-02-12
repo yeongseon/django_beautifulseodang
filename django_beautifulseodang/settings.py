@@ -50,6 +50,9 @@ INSTALLED_APPS = (
     #'allauth.socialaccount.providers.linkedin',
     #'allauth.socialaccount.providers.twitter',
 
+    # Disqus
+    'disqus' ,
+
     # ckeditor
     'ckeditor',
     'ckeditor_uploader',
@@ -166,6 +169,10 @@ CKEDITOR_CONFIGS = {
         'toolbar': None,
     }
 }
+
+# Disqus
+DISQUS_API_KEY = 'atDfzFOlBKe7bZ1YiVk7FHVJOGky1tMTTFNMWKLratQ8EQiCllxdB6QT0cIfI3Qo'
+DISQUS_WEBSITE_SHORTNAME = 'beautifulseodang'
 
 try:
     from .allauth_settings import *
