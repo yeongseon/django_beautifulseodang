@@ -40,7 +40,6 @@
 
         <ul class="list-unstyled list-inline list-social-icons">
             <li>
-                {% social_widget_render "facebook/share_button.html" href="developers.facebook.com"%}
                 <a href="developers.facebook.com"><i class="fa fa-facebook-square fa-2x"></i></a>
             </li>
             <li>
@@ -55,7 +54,7 @@
         </ul>
 
         <br/>
-
+        {% social_widget_render "facebook/share_button.html" href="developers.facebook.com"%}
         <!--
         {% social_widget_render "twitter/share_button.html" href="http://www.twitter.com" %}
         -->
