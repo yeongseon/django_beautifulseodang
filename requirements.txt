@@ -5,11 +5,15 @@ django-bootstrap-form==3.2.1
 django-bootstrap-pagination==1.6.2
 django-bootstrap3==7.0.1
 django-ckeditor==5.1.1
+django-disqus==0.5
 django-fontawesome==0.2.6
 django-social-share==0.3.1
 django-social-widgets==0.4.0
+mock==2.0.0
 oauthlib==1.1.2
+pbr==1.10.0
 python3-openid==3.0.10
 PyYAML==3.12
 requests==2.11.1
 requests-oauthlib==0.6.2
+six==1.10.0
