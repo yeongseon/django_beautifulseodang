@@ -56,6 +56,11 @@ class PurposeView(TemplateView):
 class ProfileView(TemplateView):
     template_name = 'plane/profile.html'
 
+# Donation
+
+class SponsorView(TemplateView):
+    template_name = 'donation/sponsor.html'
+
 #
 
 class SignupView(SignupView):

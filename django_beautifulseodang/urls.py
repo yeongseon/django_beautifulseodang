@@ -14,9 +14,10 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from home.views import HomePageView, HomePageListView, AboutView, ProfileView, GreetingView, \
-    TimelineView, PeopleView, NewsView, \
-    ContentView, CurriculumView, FeatureView, PeriodView, PurposeView
+from home.views import HomePageView, HomePageListView, AboutView, ProfileView, \
+    GreetingView, TimelineView, PeopleView, NewsView, \
+    ContentView, CurriculumView, FeatureView, PeriodView, PurposeView, \
+    SponsorView
 
 urlpatterns = [
     url(r'^$', HomePageListView.as_view(), name='home'),
@@ -32,6 +33,8 @@ urlpatterns = [
     url(r'^education/feature/', FeatureView.as_view(), name='feature'),
     url(r'^education/period/', PeriodView.as_view(), name='period'),
     url(r'^education/purpose/', PurposeView.as_view(), name='purpose'),
+
+    url(r'^donation/sponsor/', SponsorView.as_view(), name='sponsor'),
 
     url(r'^accounts/', include('allauth.urls')),
     url(r'^accounts/profile/$', ProfileView.as_view(), name='profile'),
