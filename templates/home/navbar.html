@@ -1,7 +1,7 @@
 {% block navbar %}
 <!-- <div class="navbar-wrapper"> -->
 <!-- <div class="container"> -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-custom navbar-light bg-faded navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -10,19 +10,25 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/home">아름다운 서당</a>
+
+            <a href="{% url 'home' %}">
+              <img src="/static/img/home/logo.png" alt="BeautifulSeodang"
+              style="max-width: 100%;  height: auto; max-height: 40px; justify-content: center;">
+            </a>
+
+            <!-- <a class="navbar-brand" href="/home"></a> -->
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 소개 <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="/introduction/about">아름다운서당은</a><li>
                         <li><a href="/introduction/greeting">대표인사말</a><li>
-                        <li><a href="/introduction/timeline">연혁</a><li>
+                        <li><a href="/introduction/timeline">걸어온길</a><li>
                         <li><a href="/introduction/people">함께하는사람들</a><li>
                         <li><a href="/introduction/news">언론보도</a><li>
-                        <li><a href="/">찾아오는길</a><li>
+                        <!-- <li><a href="/">찾아오는길</a><li> -->
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -52,15 +58,13 @@
                 <!--
                 <li><a href="/">졸업생커뮤니티</a><li>
                 -->
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
+
                 {% if user.is_authenticated %}
                 <li><a href="/accounts/logout">로그아웃</a><li>
                 {% else %}
                 <li><a href="/accounts/signup">회원가입</a><li>
                 <li><a href="/accounts/login">로그인</a><li>
                 {% endif %}
-            </ul>
         </div>
     </div>
 </nav>
