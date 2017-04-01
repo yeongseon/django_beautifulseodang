@@ -6,6 +6,7 @@ from allauth.account.views import SignupView, LoginView, LogoutView
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 from home.models import Post
+from home.models import Donate
 # Create your views here.
 
 class HomePageView(TemplateView):
@@ -58,9 +59,12 @@ class ProfileView(TemplateView):
 
 # Donation
 
-class SponsorView(TemplateView):
+class SponsorView(ListView):
     template_name = 'donation/sponsor.html'
+    model = Donate
 
+class HowtoView(TemplateView):
+    template_name = 'donation/howto.html'
 #
 
 class SignupView(SignupView):

@@ -12,13 +12,12 @@ body {
     margin-bottom: 60px;
 }
 
-
 .bg-blue {
-    color: #2793E8;
+    background-color: #2793E8;
 }
 
 .bg-green {
-    color: #559900;
+    background-color: #559900;
 }
 
 .bg-light-gray {
@@ -113,6 +112,9 @@ body {
     color: #666666;
 }
 
+.text-white {
+    color: #FFFFFF;
+}
 /* CUSTOMIZE THE JUMBOTRON
 -------------------------------------------------- */
 .jumbotron {

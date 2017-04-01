@@ -10,6 +10,9 @@
 {% block account_content %}
 
 <h1>{% trans "로그인" %}</h1>
+<a href="{% url "social:begin" "google-oauth2" %}"><button class="btn btn-danger" style="width: 40%">G+ Login</button></a>
+<a href="{% url "social:begin" "facebook" %}"><button class="btn btn-primary" style="width: 40%">FB Login</button></a>
+
 
 {% get_providers as socialaccount_providers %}
 {% if socialaccount_providers %}

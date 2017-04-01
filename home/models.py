@@ -17,3 +17,20 @@ class Post(models.Model):
 class Post_media(models.Model):
     title = models.CharField(max_length=1024)
     body = models.CharField
+
+class Donate(models.Model):
+    id = models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=32)
+    amount = models.IntegerField()
+
+    def __str__(self):
+        return self.id
+
+class Book(models.Model):
+    id = models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=32, default="")
+    author = models.CharField(max_length=32, default="")
+    img = models.CharField(max_length=1024, default="")
+
+    def __str__(self):
+        return self.id

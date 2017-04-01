@@ -9,9 +9,13 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 # Django all auth settings
 AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`
-     'django.contrib.auth.backends.ModelBackend',
+
+    'social_core.backends.google.GoogleOAuth2',  # Google
+    'social_core.backends.facebook.FacebookOAuth2',  # Facebook
+    'django.contrib.auth.backends.ModelBackend',
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
+
 )
 SITE_ID = 1
 
@@ -25,6 +29,8 @@ AUTH_PASSWORD_VALIDATORS = [
         }
     }
 ]
+
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
 LOGIN_REDIRECT_URL = '/'
 ACCOUNT_FORMS = {

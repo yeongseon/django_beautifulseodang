@@ -14,9 +14,25 @@
         <h1>후원 내역</h1>
     </div>
 
+    <table class="table">
+        <tr>
+            <th>번호</th>
+            <th>후원자</th>
+            <th>후원금액</th>
+        </tr>
+        <tbody>
+        {% for donate in object_list %}
+        <tr>
+            <td> {{ donate.num }}</td>
+            <td> {{ donate.name}}</td>
+            <td> {{ donate.amount }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <p class="lead"> ※ YLA 장충반은 서울석유에서 강의실과 학생 중식을 제공하고 있습니다. </p>
 
-
-    <!-- /END THE FEATURETTES -->
 
 </div><!-- /.container -->
 {% include 'home/footer.html' %}
