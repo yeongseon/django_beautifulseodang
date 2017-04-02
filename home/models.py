@@ -27,10 +27,11 @@ class Donate(models.Model):
         return self.id
 
 class Book(models.Model):
-    id = models.IntegerField(primary_key=True)
-    name = models.CharField(max_length=32, default="")
+    type = models.CharField(max_length=32, default="")
+    id = models.IntegerField()
+    name = models.CharField(primary_key=True, max_length=32, default="")
     author = models.CharField(max_length=32, default="")
     img = models.CharField(max_length=1024, default="")
 
     def __str__(self):
-        return self.id
+        return self.name
