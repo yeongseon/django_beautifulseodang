@@ -1,44 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7cdf229-a05e-4187-984c-8c569a531062" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/education/feature/yla_icon-01.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/education/feature/yla_icon-02.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/education/feature/yla_icon-03.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/education/feature/yla_icon-04.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/education/feature/yla_icon-05.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/education/feature/yla_icon-06.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/education/feature/yla_icon-07.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/education/feature/yla_icon-08.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/education/feature/yla_icon-09.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/education/feature/yla_icon-10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/education/feature/yla_icon-11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/favicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/apply/application.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/apply/inquire.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/education/feature/icon_100_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/education/feature/icon_100_10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/education/feature/icon_100_11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/education/feature/icon_100_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/education/feature/icon_100_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/education/feature/icon_100_4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/education/feature/icon_100_5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/education/feature/icon_100_6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/education/feature/icon_100_7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/education/feature/icon_100_8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/education/feature/icon_100_9.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/education/purpose/character.png" afterPath="$PROJECT_DIR$/static/img/education/purpose/character.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/education/purpose/commitment.png" afterPath="$PROJECT_DIR$/static/img/education/purpose/commitment.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/education/purpose/competence.png" afterPath="$PROJECT_DIR$/static/img/education/purpose/competence.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_beautifulseodang/settings.py" afterPath="$PROJECT_DIR$/django_beautifulseodang/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_beautifulseodang/urls.py" afterPath="$PROJECT_DIR$/django_beautifulseodang/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/views.py" afterPath="$PROJECT_DIR$/home/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/donation/howto.html" afterPath="$PROJECT_DIR$/templates/donation/howto.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/education/content.html" afterPath="$PROJECT_DIR$/templates/education/content.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/education/feature.html" afterPath="$PROJECT_DIR$/templates/education/feature.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/home/navbar.html" afterPath="$PROJECT_DIR$/templates/home/navbar.html" />
-    </list>
+    <list default="true" id="f7cdf229-a05e-4187-984c-8c569a531062" name="Default" comment="" />
     <ignored path="django_beautifulseodang.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
