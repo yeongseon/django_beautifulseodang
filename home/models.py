@@ -18,7 +18,7 @@ class Post_media(models.Model):
     title = models.CharField(max_length=1024)
     body = models.CharField
 
-class Donate(models.Model):
+class Donation(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=32)
     amount = models.IntegerField()
@@ -27,7 +27,7 @@ class Donate(models.Model):
         return self.id
 
 class Book(models.Model):
-    type = models.CharField(max_length=32, default="")
+    sort = models.CharField(max_length=32, default="")
     id = models.IntegerField()
     name = models.CharField(primary_key=True, max_length=32, default="")
     author = models.CharField(max_length=32, default="")

@@ -15,9 +15,161 @@
         <h1>교육 내용</h1>
     </div>
 
+    <div class="panel panel-warning">
+        <div class="panel-body">
+            <h2 class="text-blue"><strong>인문학과정</strong></h2>
+        </div>
+        <div class="panel-footer panel-waring">
 
-    </hr>
-    <!-- /END THE FEATURETTES -->
+            <h3 class="text-muted"><strong>동양철학</strong></h3>
+
+            <table class="table">
+                <tr>
+                    <th>번호</th>
+                    <th>책이름</th>
+                    <th>저자</th>
+                </tr>
+                <tbody>
+                {% for book in object_list %}
+                {% if book.sort == 'east' %}
+                <tr>
+                    <td> {{ book.id }}</td>
+                    <td> {{ book.name }}</td>
+                    <td> {{ book.author }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+            <br>
+
+            <h3 class="text-muted"><strong>서양철학</strong></h3>
+            <table class="table">
+                <tr>
+                    <th>번호</th>
+                    <th>책이름</th>
+                    <th>저자</th>
+                </tr>
+                <tbody>
+                {% for book in object_list %}
+                {% if book.sort == 'west' %}
+                <tr>
+                    <td> {{ book.id }}</td>
+                    <td> {{ book.name }}</td>
+                    <td> {{ book.author }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+            <br>
+
+            <h3 class="text-muted"><strong>한국문학</strong></h3>
+            <table class="table">
+                <tr>
+                    <th>번호</th>
+                    <th>책이름</th>
+                    <th>저자</th>
+                </tr>
+                <tbody>
+                {% for book in object_list %}
+                {% if book.sort == 'korea' %}
+                <tr>
+                    <td> {{ book.id }}</td>
+                    <td> {{ book.name }}</td>
+                    <td> {{ book.author }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+            <br>
+
+            <h3 class="text-muted"><strong>외국문학</strong></h3>
+            <table class="table">
+                <tr>
+                    <th>번호</th>
+                    <th>책이름</th>
+                    <th>저자</th>
+                </tr>
+                <tbody>
+                {% for book in object_list %}
+                {% if book.sort == 'foreign' %}
+                <tr>
+                    <td> {{ book.id }}</td>
+                    <td> {{ book.name }}</td>
+                    <td> {{ book.author }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+            <br>
+
+            <h3 class="text-muted"><strong>역사/문화</strong></h3>
+            <table class="table">
+                <tr>
+                    <th>번호</th>
+                    <th>책이름</th>
+                    <th>저자</th>
+                </tr>
+                <tbody>
+                {% for book in object_list %}
+                {% if book.sort == 'history' %}
+                <tr>
+                    <td> {{ book.id }}</td>
+                    <td> {{ book.name }}</td>
+                    <td> {{ book.author }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+            <br>
+
+            <h3 class="text-muted"><strong>세계체제/시대정신</strong></h3>
+            <table class="table">
+                <tr>
+                    <th>번호</th>
+                    <th>책이름</th>
+                    <th>저자</th>
+                </tr>
+                <tbody>
+                {% for book in object_list %}
+                {% if book.sort == 'zeitgeist' %}
+                <tr>
+                    <td> {{ book.id }}</td>
+                    <td> {{ book.name }}</td>
+                    <td> {{ book.author }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+            <br>
+
+            <h3 class="text-muted"><strong>과학기술</strong></h3>
+            <table class="table">
+                <tr>
+                    <th>번호</th>
+                    <th>책이름</th>
+                    <th>저자</th>
+                </tr>
+                <tbody>
+                {% for book in object_list %}
+                {% if book.sort == 'science' %}
+                <tr>
+                    <td> {{ book.id }}</td>
+                    <td> {{ book.name }}</td>
+                    <td> {{ book.author }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+            <br>
+        </div>
+    </div>
 
 </div><!-- /.container -->
 

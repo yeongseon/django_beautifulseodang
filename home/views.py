@@ -6,7 +6,8 @@ from allauth.account.views import SignupView, LoginView, LogoutView
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 from home.models import Post
-from home.models import Donate
+from home.models import Donation
+from home.models import Book
 # Create your views here.
 
 class HomePageView(TemplateView):
@@ -39,8 +40,9 @@ class NewsView(TemplateView):
 
 # Education
 
-class ContentView(TemplateView):
+class ContentView(ListView):
     template_name = 'education/content.html'
+    model = Book
 
 class CurriculumView(TemplateView):
     template_name = 'education/curriculum.html'
@@ -61,7 +63,7 @@ class ProfileView(TemplateView):
 
 class SponsorView(ListView):
     template_name = 'donation/sponsor.html'
-    model = Donate
+    model = Donation
 
 class HowtoView(TemplateView):
     template_name = 'donation/howto.html'
