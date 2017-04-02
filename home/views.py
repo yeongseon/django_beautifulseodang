@@ -67,7 +67,13 @@ class SponsorView(ListView):
 
 class HowtoView(TemplateView):
     template_name = 'donation/howto.html'
-#
+
+# Apply
+class ApplicationView(TemplateView):
+    template_name = 'apply/application.html'
+
+class InquireView(TemplateView):
+    template_name = 'apply/inquire.html'
 
 class SignupView(SignupView):
     template_name = 'allauth/account/signup.html'

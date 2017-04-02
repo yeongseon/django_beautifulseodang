@@ -17,7 +17,7 @@ from django.contrib import admin
 from home.views import HomePageView, HomePageListView, AboutView, ProfileView, \
     GreetingView, TimelineView, PeopleView, NewsView, \
     ContentView, CurriculumView, FeatureView, PeriodView, PurposeView, \
-    SponsorView, HowtoView
+    SponsorView, HowtoView, ApplicationView, InquireView
 
 urlpatterns = [
     url(r'^$', HomePageListView.as_view(), name='home'),
@@ -37,6 +37,9 @@ urlpatterns = [
     url(r'^donation/sponsor/', SponsorView.as_view(), name='sponsor'),
     url(r'^donation/howto/', HowtoView.as_view(), name='howto'),
 
+    url(r'^apply/application/', ApplicationView.as_view(), name='application'),
+    url(r'^apply/inquire/', InquireView.as_view(), name='application'),
+
     url(r'^accounts/', include('allauth.urls')),
     url(r'^accounts/profile/$', ProfileView.as_view(), name='profile'),
 
@@ -44,4 +47,6 @@ urlpatterns = [
     url('', include('social_django.urls', namespace='social')),
 
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+
+    url(r'^', include('favicon.urls')),
 ]

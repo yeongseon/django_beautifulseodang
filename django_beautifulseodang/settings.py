@@ -100,6 +100,9 @@ INSTALLED_APPS = (
     'social_django',
     'social.apps.django_app.default',
 
+    # Favicon
+    'favicon',
+
     # Disqus
     'disqus' ,
 
@@ -208,6 +211,9 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'statics')
+
+# favicon
+FAVICON_PATH = STATIC_URL + 'img/favicon.png'
 
 # ckeditor
 MEDIA_URL = '/media/'

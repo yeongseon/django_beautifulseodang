@@ -171,6 +171,36 @@
         </div>
     </div>
 
+    <div class="panel panel-warning">
+        <div class="panel-body">
+            <h2 class="text-blue"><strong>경영학과정</strong></h2>
+        </div>
+        <div class="panel-footer panel-waring">
+
+            <h3 class="text-muted"><strong>경영서 리뷰</strong></h3>
+
+            <table class="table">
+                <tr>
+                    <th>번호</th>
+                    <th>책이름</th>
+                    <th>저자</th>
+                </tr>
+                <tbody>
+                {% for book in object_list %}
+                {% if book.sort == 'business' %}
+                <tr>
+                    <td> {{ book.id }}</td>
+                    <td> {{ book.name }}</td>
+                    <td> {{ book.author }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+            <br>
+        </div>
+    </div>
+
 </div><!-- /.container -->
 
 {% include 'home/footer.html' %}
