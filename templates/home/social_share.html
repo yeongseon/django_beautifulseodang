@@ -1,0 +1,18 @@
+{% load social_share %}
+{% load fontawesome %}
+
+<div class="row">
+    <div class="col-lg-8 col-xs-8 col-sm-8 col-md-8">
+    </div>
+    <div class="col-lg-1 col-xs-1 col-sm-1 col-md-1">
+        {% post_to_facebook object_or_url  %}
+    </div>
+    <div class="col-lg-1 col-xs-1 col-sm-1 col-md-1">
+        {% post_to_twitter "{{object.title}}" object_or_url %}
+    </div>
+    <div class="col-lg-1 col-xs-1 col-sm-1 col-md-1">
+        {% post_to_gplus object_or_url %}
+    </div>
+    <div class="col-lg-1 col-xs-1 col-sm-1 col-md-1">
+    </div>
+</div>
