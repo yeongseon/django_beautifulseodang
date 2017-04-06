@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from django.http import HttpResponse
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, DetailView
 from allauth.account.views import SignupView, LoginView, LogoutView
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
@@ -37,6 +37,19 @@ class PeopleView(TemplateView):
 
 class NewsView(TemplateView):
     template_name = 'introduction/news.html'
+
+class NoticesView(ListView):
+    template_name = 'introduction/notices.html'
+    model = Post
+    paginate_by = 5
+
+class NoticeDetailView(DetailView):
+    template_name = 'introduction/notice_detail.html'
+    model = Post
+
+    def get_context_data(self, **kwargs):
+        context = super(NoticeDetailView, self).get_context_data(**kwargs)
+        return context
 
 # Education
 

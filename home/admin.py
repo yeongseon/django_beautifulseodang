@@ -4,6 +4,6 @@ from .models import Post
 # Register your models here.
 
 class PostAdmin(admin.ModelAdmin):
-    fields = ['title', 'body']
+    fields = ['title', 'auth', 'body']
 
 admin.site.register(Post, PostAdmin)

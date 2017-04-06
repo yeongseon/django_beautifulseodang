@@ -1,0 +1,28 @@
+{% extends 'home/base.html' %}
+{% load bootstrap3 %}
+
+{% block content %}
+{% include 'home/navbar.html' %}
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+
+    <!-- START THE FEATURETTES -->
+    <hr class="featurette-divider">
+
+    <p> {{ object.title }}</p>
+    <p> {{ object.date }}</p>
+    <p> {{ object.auth }}</p>
+    <p> {{ object.body }}</p>
+
+
+    {% include 'home/social_share.html' %}
+    <!-- /END THE FEATURETTES -->
+
+</div><!-- /.container -->
+
+{% include 'home/footer.html' %}
+{% endblock %}

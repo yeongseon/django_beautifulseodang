@@ -1,0 +1,51 @@
+{% extends 'home/base.html' %}
+{% load bootstrap3 %}
+
+{% block content %}
+{% include 'home/navbar.html' %}
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+
+    <!-- START THE FEATURETTES -->
+    <hr class="featurette-divider">
+
+    <div class="jumbotron">
+        <h1>공지사항</h1>
+    </div>
+
+    <div class="table-responsive">
+
+        <table class="table">
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>날짜</th>
+                <th>글쓴이</th>
+            </tr>
+            <tbody>
+            {% for post in object_list %}
+            <tr>
+                <td> {{ post.number }}</td>
+                <td> <p>
+                    <a href="/introduction/notice_detail/1">  {{ post.title }} </a>
+                </p> </td>
+                <td> {{ post.date }}</td>
+                <td> {{ post.auth }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    {% include 'home/pagination.html' %}
+
+    <!-- /END THE FEATURETTES -->
+
+</div><!-- /.container -->
+
+{% include 'home/footer.html' %}
+{% endblock %}

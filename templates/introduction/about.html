@@ -1,6 +1,7 @@
 {% extends 'home/base.html' %}
 {% load bootstrap3 %}
-
+{% load social_share %}
+{% load fontawesome %}
 {% load disqus_tags %}
 {% disqus_dev %}
 
@@ -35,7 +36,7 @@
 
 
     {% include 'home/social_share.html' %}
-
+    {% disqus_show_comments %}
     <!-- /END THE FEATURETTES -->
 
 </div><!-- /.container -->
