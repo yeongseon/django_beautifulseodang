@@ -227,7 +227,7 @@ CKEDITOR_CONFIGS = {
 }
 
 # Disqus
-DISQUS_API_KEY = 'atDfzFOlBKe7bZ1YiVk7FHVJOGky1tMTTFNMWKLratQ8EQiCllxdB6QT0cIfI3Qo'
+DISQUS_API_KEY = 'zcJshWHxmOREPGjOrCq6r0rviSIIELz2iHWEdwDrpYSpko5wZDVBt60c7kYsvjlP'
 DISQUS_WEBSITE_SHORTNAME = 'http-yeongseon-pythonanywhere-com'
 
 try:
