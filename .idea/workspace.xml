@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7cdf229-a05e-4187-984c-8c569a531062" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/introduction/notice_detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/introduction/notices.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_beautifulseodang/settings.py" afterPath="$PROJECT_DIR$/django_beautifulseodang/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_beautifulseodang/urls.py" afterPath="$PROJECT_DIR$/django_beautifulseodang/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/admin.py" afterPath="$PROJECT_DIR$/home/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/views.py" afterPath="$PROJECT_DIR$/home/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_facebook.html" afterPath="$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_facebook.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_gplus.html" afterPath="$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_gplus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_twitter.html" afterPath="$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_twitter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/home/home.html" afterPath="$PROJECT_DIR$/templates/home/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/home/navbar.html" afterPath="$PROJECT_DIR$/templates/home/navbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/introduction/about.html" afterPath="$PROJECT_DIR$/templates/introduction/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/introduction/greeting.html" afterPath="$PROJECT_DIR$/templates/introduction/greeting.html" />
     </list>
     <ignored path="django_beautifulseodang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,11 +33,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.52845526">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/django_beautifulseodang/settings.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-360">
-                  <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+                <state relative-caret-position="495">
+                  <caret line="230" column="61" lean-forward="false" selection-start-line="230" selection-start-column="61" selection-end-line="230" selection-end-column="61" />
                   <folding />
                 </state>
               </provider>
@@ -66,7 +53,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/home/views.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="350">
@@ -178,7 +165,7 @@
             <entry file="file://$PROJECT_DIR$/templates/introduction/about.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="437">
-                  <caret line="38" column="4" lean-forward="false" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+                  <caret line="38" column="27" lean-forward="false" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="27" />
                   <folding />
                 </state>
               </provider>
@@ -327,7 +314,6 @@
         <option value="$PROJECT_DIR$/templates/education/feature.html" />
         <option value="$PROJECT_DIR$/templates/education/purpose.html" />
         <option value="$PROJECT_DIR$/templates/education/curriculum.html" />
-        <option value="$PROJECT_DIR$/django_beautifulseodang/settings.py" />
         <option value="$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_gplus.html" />
         <option value="$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_facebook.html" />
         <option value="$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_twitter.html" />
@@ -341,6 +327,7 @@
         <option value="$PROJECT_DIR$/templates/introduction/notice_detail.html" />
         <option value="$PROJECT_DIR$/templates/introduction/greeting.html" />
         <option value="$PROJECT_DIR$/templates/introduction/about.html" />
+        <option value="$PROJECT_DIR$/django_beautifulseodang/settings.py" />
       </list>
     </option>
   </component>
@@ -1006,14 +993,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_beautifulseodang/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
-          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/home/social_share.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -1152,16 +1131,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/home/navbar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1213,7 +1182,25 @@
     <entry file="file://$PROJECT_DIR$/templates/introduction/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
-          <caret line="38" column="4" lean-forward="false" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+          <caret line="38" column="27" lean-forward="false" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_beautifulseodang/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="230" column="61" lean-forward="false" selection-start-line="230" selection-start-column="61" selection-end-line="230" selection-end-column="61" />
           <folding />
         </state>
       </provider>
