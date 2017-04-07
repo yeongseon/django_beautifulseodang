@@ -16,34 +16,32 @@
     <div class="jumbotron">
         <h1>언론보도</h1>
     </div>
-    <div class="panel panel-warning">
-        <div class="panel-footer">
-            <div class="table-responsive">
-                <table class="table">
-                    <tr>
-                        <th width="10%">번호</th>
-                        <th width="50%">제목</th>
-                        <th width="20%">날짜</th>
-                        <th width="10%">글쓴이</th>
-                        <th width="10%">조회수</th>
-                    </tr>
-                    <tbody>
-                    {% for post in object_list %}
-                    <tr>
-                        <td width="10%"> {{ post.id }}</td>
-                        <td width="50%"> <p>
-                            <a href="/introduction/news_detail/1">  {{ post.subject }} </a>
-                        </p> </td>
-                        <td width="20%"> {{ post.date }}</td>
-                        <td width="10%"> {{ post.name }}</td>
-                        <td width="10%"> {{ post.hits }}</td>
-                    </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
+
+    <div class="table-responsive">
+        <table class="table">
+            <tr>
+                <th width="10%">번호</th>
+                <th width="50%">제목</th>
+                <th width="20%">날짜</th>
+                <th width="10%">글쓴이</th>
+                <th width="10%">조회수</th>
+            </tr>
+            <tbody>
+            {% for post in object_list %}
+            <tr>
+                <td width="10%"> {{ post.id }}</td>
+                <td width="50%"> <p>
+                    <a href="/introduction/news_detail/{{ post.id }}">  {{ post.subject }} </a>
+                </p> </td>
+                <td width="20%"> {{ post.date }}</td>
+                <td width="10%"> {{ post.name }}</td>
+                <td width="10%"> {{ post.hits }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
+
     {% include 'home/pagination.html' %}
 
 
