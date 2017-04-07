@@ -25,17 +25,19 @@
 
             <table class="table">
                 <tr>
-                    <th>번호</th>
-                    <th>책이름</th>
-                    <th>저자</th>
+                    <th width="10%">번호</th>
+                    <th width="20%"></th>
+                    <th width="50%">책이름</th>
+                    <th width="20%">저자</th>
                 </tr>
                 <tbody>
                 {% for book in object_list %}
                 {% if book.sort == 'east' %}
                 <tr>
-                    <td> {{ book.id }}</td>
-                    <td> {{ book.name }}</td>
-                    <td> {{ book.author }}</td>
+                    <td width="10%"> {{ book.id }}</td>
+                    <th width="20%"> <img src={{ book.img}} alt=""> </th>
+                    <td width="50%"> {{ book.name }}</td>
+                    <td width="20%"> {{ book.author }}</td>
                 </tr>
                 {% endif %}
                 {% endfor %}
@@ -46,17 +48,17 @@
             <h3 class="text-muted"><strong>서양철학</strong></h3>
             <table class="table">
                 <tr>
-                    <th>번호</th>
-                    <th>책이름</th>
-                    <th>저자</th>
+                    <th width="10%">번호</th>
+                    <th width="70%">책이름</th>
+                    <th width="20%">저자</th>
                 </tr>
                 <tbody>
                 {% for book in object_list %}
                 {% if book.sort == 'west' %}
                 <tr>
-                    <td> {{ book.id }}</td>
-                    <td> {{ book.name }}</td>
-                    <td> {{ book.author }}</td>
+                    <td width="10%"> {{ book.id }}</td>
+                    <td width="70%"> {{ book.name }}</td>
+                    <td width="20%"> {{ book.author }}</td>
                 </tr>
                 {% endif %}
                 {% endfor %}
@@ -67,17 +69,17 @@
             <h3 class="text-muted"><strong>한국문학</strong></h3>
             <table class="table">
                 <tr>
-                    <th>번호</th>
-                    <th>책이름</th>
-                    <th>저자</th>
+                    <th width="10%">번호</th>
+                    <th width="70%">책이름</th>
+                    <th width="20%">저자</th>
                 </tr>
                 <tbody>
                 {% for book in object_list %}
                 {% if book.sort == 'korea' %}
                 <tr>
-                    <td> {{ book.id }}</td>
-                    <td> {{ book.name }}</td>
-                    <td> {{ book.author }}</td>
+                    <td width="10%"> {{ book.id }}</td>
+                    <td width="70%"> {{ book.name }}</td>
+                    <td width="20%"> {{ book.author }}</td>
                 </tr>
                 {% endif %}
                 {% endfor %}
@@ -88,17 +90,17 @@
             <h3 class="text-muted"><strong>외국문학</strong></h3>
             <table class="table">
                 <tr>
-                    <th>번호</th>
-                    <th>책이름</th>
-                    <th>저자</th>
+                    <th width="10%">번호</th>
+                    <th width="70%">책이름</th>
+                    <th width="20%">저자</th>
                 </tr>
                 <tbody>
                 {% for book in object_list %}
                 {% if book.sort == 'foreign' %}
                 <tr>
-                    <td> {{ book.id }}</td>
-                    <td> {{ book.name }}</td>
-                    <td> {{ book.author }}</td>
+                    <td width="10%"> {{ book.id }}</td>
+                    <td width="70%"> {{ book.name }}</td>
+                    <td width="20%"> {{ book.author }}</td>
                 </tr>
                 {% endif %}
                 {% endfor %}
@@ -109,17 +111,17 @@
             <h3 class="text-muted"><strong>역사/문화</strong></h3>
             <table class="table">
                 <tr>
-                    <th>번호</th>
-                    <th>책이름</th>
-                    <th>저자</th>
+                    <th width="10%">번호</th>
+                    <th width="70%">책이름</th>
+                    <th width="20%">저자</th>
                 </tr>
                 <tbody>
                 {% for book in object_list %}
                 {% if book.sort == 'history' %}
                 <tr>
-                    <td> {{ book.id }}</td>
-                    <td> {{ book.name }}</td>
-                    <td> {{ book.author }}</td>
+                    <td width="10%"> {{ book.id }}</td>
+                    <td width="70%"> {{ book.name }}</td>
+                    <td width="20%"> {{ book.author }}</td>
                 </tr>
                 {% endif %}
                 {% endfor %}
@@ -130,17 +132,17 @@
             <h3 class="text-muted"><strong>세계체제/시대정신</strong></h3>
             <table class="table">
                 <tr>
-                    <th>번호</th>
-                    <th>책이름</th>
-                    <th>저자</th>
+                    <th width="10%">번호</th>
+                    <th width="70%">책이름</th>
+                    <th width="20%">저자</th>
                 </tr>
                 <tbody>
                 {% for book in object_list %}
                 {% if book.sort == 'zeitgeist' %}
                 <tr>
-                    <td> {{ book.id }}</td>
-                    <td> {{ book.name }}</td>
-                    <td> {{ book.author }}</td>
+                    <td width="10%"> {{ book.id }}</td>
+                    <td width="70%"> {{ book.name }}</td>
+                    <td width="20%"> {{ book.author }}</td>
                 </tr>
                 {% endif %}
                 {% endfor %}
@@ -151,17 +153,17 @@
             <h3 class="text-muted"><strong>과학기술</strong></h3>
             <table class="table">
                 <tr>
-                    <th>번호</th>
-                    <th>책이름</th>
-                    <th>저자</th>
+                    <th width="10%">번호</th>
+                    <th width="70%">책이름</th>
+                    <th width="20%">저자</th>
                 </tr>
                 <tbody>
                 {% for book in object_list %}
                 {% if book.sort == 'science' %}
                 <tr>
-                    <td> {{ book.id }}</td>
-                    <td> {{ book.name }}</td>
-                    <td> {{ book.author }}</td>
+                    <td width="10%"> {{ book.id }}</td>
+                    <td width="70%"> {{ book.name }}</td>
+                    <td width="20%"> {{ book.author }}</td>
                 </tr>
                 {% endif %}
                 {% endfor %}
@@ -181,17 +183,17 @@
 
             <table class="table">
                 <tr>
-                    <th>번호</th>
-                    <th>책이름</th>
-                    <th>저자</th>
+                    <th width="10%">번호</th>
+                    <th width="70%">책이름</th>
+                    <th width="20%">저자</th>
                 </tr>
                 <tbody>
                 {% for book in object_list %}
                 {% if book.sort == 'business' %}
                 <tr>
-                    <td> {{ book.id }}</td>
-                    <td> {{ book.name }}</td>
-                    <td> {{ book.author }}</td>
+                    <td width="10%"> {{ book.id }}</td>
+                    <td width="70%"> {{ book.name }}</td>
+                    <td width="20%"> {{ book.author }}</td>
                 </tr>
                 {% endif %}
                 {% endfor %}
