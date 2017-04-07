@@ -8,6 +8,8 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from home.models import Post
 from home.models import Donation
 from home.models import Book
+from home.models import Notice
+from home.models import News
 # Create your views here.
 
 class HomePageView(TemplateView):
@@ -35,17 +37,27 @@ class TimelineView(TemplateView):
 class PeopleView(TemplateView):
     template_name = 'introduction/people.html'
 
-class NewsView(TemplateView):
+class NewsView(ListView):
     template_name = 'introduction/news.html'
+    model = News
+    paginate_by = 5
+
+class NewsDetailView(DetailView):
+    template_name = 'introduction/news_detail.html'
+    model = Notice
+
+    def get_context_data(self, **kwargs):
+        context = super(NewsDetailView, self).get_context_data(**kwargs)
+        return context
 
 class NoticesView(ListView):
     template_name = 'introduction/notices.html'
-    model = Post
+    model = Notice
     paginate_by = 5
 
 class NoticeDetailView(DetailView):
     template_name = 'introduction/notice_detail.html'
-    model = Post
+    model = Notice
 
     def get_context_data(self, **kwargs):
         context = super(NoticeDetailView, self).get_context_data(**kwargs)

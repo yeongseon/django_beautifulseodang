@@ -18,11 +18,24 @@ class Post_media(models.Model):
     title = models.CharField(max_length=1024)
     body = models.CharField
 
+class Notice(models.Model):
+    subject = models.CharField(max_length=1024, blank=True)
+    name = models.CharField(max_length=32, blank=True)
+    date = models.DateField(null=True, blank=True)
+    body = RichTextField(max_length=4096)
+    hits = models.IntegerField(default=0, blank=True)
+
+class News(models.Model):
+    subject = models.CharField(max_length=1024, blank=True)
+    name = models.CharField(max_length=32, blank=True)
+    date = models.DateField(null=True, blank=True)
+    body = RichTextField(max_length=4096)
+    hits = models.IntegerField(default=0, blank=True)
+
 class Donation(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=32)
     amount = models.IntegerField()
-
     def __str__(self):
         return self.id
 
@@ -32,6 +45,5 @@ class Book(models.Model):
     name = models.CharField(primary_key=True, max_length=32, default="")
     author = models.CharField(max_length=32, default="")
     img = models.CharField(max_length=1024, default="")
-
     def __str__(self):
         return self.name

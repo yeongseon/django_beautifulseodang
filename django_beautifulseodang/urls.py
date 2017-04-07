@@ -15,7 +15,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from home.views import HomePageView, HomePageListView, AboutView, ProfileView, \
-    GreetingView, TimelineView, PeopleView, NewsView, NoticeDetailView, NoticesView, \
+    GreetingView, TimelineView, PeopleView, NewsView, NewsDetailView, NoticeDetailView, NoticesView, \
     ContentView, CurriculumView, FeatureView, PeriodView, PurposeView, \
     SponsorView, HowtoView, ApplicationView, InquireView
 
@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^introduction/timeline/', TimelineView.as_view(), name='timeline'),
     url(r'^introduction/people/', PeopleView.as_view(), name='people'),
     url(r'^introduction/news/', NewsView.as_view(), name='news'),
+    url(r'^introduction/news_detail/(?P<pk>[0-9]+)/$', NewsDetailView.as_view(), name='news_detail'),
     url(r'^introduction/notices/', NoticesView.as_view(), name='notices'),
     url(r'^introduction/notice_detail/(?P<pk>[0-9]+)/$', NoticeDetailView.as_view(), name='notice_detail'),
 

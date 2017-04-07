@@ -16,31 +16,34 @@
     <div class="jumbotron">
         <h1>공지사항</h1>
     </div>
-
-    <div class="table-responsive">
-
-        <table class="table">
-            <tr>
-                <th>번호</th>
-                <th>제목</th>
-                <th>날짜</th>
-                <th>글쓴이</th>
-            </tr>
-            <tbody>
-            {% for post in object_list %}
-            <tr>
-                <td> {{ post.number }}</td>
-                <td> <p>
-                    <a href="/introduction/notice_detail/1">  {{ post.title }} </a>
-                </p> </td>
-                <td> {{ post.date }}</td>
-                <td> {{ post.auth }}</td>
-            </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+    <div class="panel panel-warning">
+        <div class="panel-footer">
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>날짜</th>
+                        <th>글쓴이</th>
+                        <th>조회수</th>
+                    </tr>
+                    <tbody>
+                    {% for post in object_list %}
+                    <tr>
+                        <td width="10%"> {{ post.id }}</td>
+                        <td width="50%"> <p>
+                            <a href="/introduction/notice_detail/1">  {{ post.subject }} </a>
+                        </p> </td>
+                        <td width="20%"> {{ post.date }}</td>
+                        <td width="10%"> {{ post.name }}</td>
+                        <td width="10%"> {{ post.hits }}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-
     {% include 'home/pagination.html' %}
 
     <!-- /END THE FEATURETTES -->
