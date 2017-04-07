@@ -2,7 +2,7 @@
 {% load bootstrap3 %}
 {% load social_share %}
 {% load fontawesome %}
-
+{% load disqus_tags %}
 {% block content %}
 {% include 'home/navbar.html' %}
 <div class="container marketing">
@@ -14,7 +14,17 @@
         <h1>문의하기</h1>
     </div>
 
+    <div class="panel panel-warning">
+        <div class="panel-body">
+            <h2 class="text-blue"><strong>자주하는 질문</strong></h2>
+        </div>
+        <div class="panel-body">
 
+        </div>
+    </div>
+
+    {% include 'home/social_share.html' %}
+    {% disqus_show_comments %}
 
 </div><!-- /.container -->
 {% include 'home/footer.html' %}
