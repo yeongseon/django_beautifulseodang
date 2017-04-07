@@ -27,15 +27,15 @@
                 <th width="10%">조회수</th>
             </tr>
             <tbody>
-            {% for post in object_list %}
+            {% for object in object_list %}
             <tr>
-                <td width="10%"> {{ post.id }}</td>
+                <td width="10%"> {{ object.id }}</td>
                 <td width="50%"> <p>
-                    <a href="/introduction/news_detail/{{ post.id }}">  {{ post.subject }} </a>
+                    <a href="/introduction/news_detail/{{ object.id }}">  {{ object.subject }} </a>
                 </p> </td>
-                <td width="20%"> {{ post.date }}</td>
-                <td width="10%"> {{ post.name }}</td>
-                <td width="10%"> {{ post.hits }}</td>
+                <td width="20%"> {{ object.date }}</td>
+                <td width="10%"> {{ object.name }}</td>
+                <td width="10%"> {{ object.hits }}</td>
             </tr>
             {% endfor %}
             </tbody>

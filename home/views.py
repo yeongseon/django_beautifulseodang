@@ -44,7 +44,7 @@ class NewsView(ListView):
 
 class NewsDetailView(DetailView):
     template_name = 'introduction/news_detail.html'
-    model = Notice
+    model = News
 
     def get_context_data(self, **kwargs):
         context = super(NewsDetailView, self).get_context_data(**kwargs)
