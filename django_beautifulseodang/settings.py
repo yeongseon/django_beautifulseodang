@@ -52,17 +52,21 @@ else: # JSON env
     GOOGLE_SECRET = get_env('GOOGLE_SECRET', envs)
 
 # SocialLogin: Facebook
-SOCIAL_AUTH_FACEBOOK_KEY = FACEBOOK_KEY
-SOCIAL_AUTH_FACEBOOK_SECRET = FACEBOOK_SECRET
+SOCIAL_AUTH_FACEBOOK_KEY = '848085138675225'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'fba51af8d06eb1d9cfb7760a0b0460d0'
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
   'fields': 'id, name, email'
 }
 
 # SocialLogin: Google
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = GOOGLE_KEY
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = GOOGLE_SECRET
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '993757851345-d5tfl05vo27ujdparvun72pfilg8di3v.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'cht8BxlsBTGDEJ-yMk76Xy5L'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = ['email']
+
+SOCIAL_AUTH_TWITTER_KEY = 'EUQaQkvpr4R22UTNofeqIfqsV'
+SOCIAL_AUTH_TWITTER_SECRET = 'QLjJGjCGMxkIPvGaMymAcu7zZ2GcjMxrbHqt019v5FpIs3WTB1'
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -104,7 +108,7 @@ INSTALLED_APPS = (
     'favicon',
 
     # Disqus
-    'disqus' ,
+    'disqus',
 
     # ckeditor
     'ckeditor',
@@ -137,6 +141,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 )
 
 ROOT_URLCONF = 'django_beautifulseodang.urls'
@@ -159,6 +165,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect'
             ],
             'loaders': [
                 # APP_DIRS를 주석처리 해야지 동작
@@ -168,6 +177,15 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.facebook.FacebookOAuth2',
+
+    'django.contrib.auth.backends.ModelBackend',
+)
+
 
 WSGI_APPLICATION = 'django_beautifulseodang.wsgi.application'
 

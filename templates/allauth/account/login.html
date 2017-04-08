@@ -10,10 +10,6 @@
 {% block account_content %}
 
 <h1>{% trans "로그인" %}</h1>
-<a href="{% url "social:begin" "google-oauth2" %}"><button class="btn btn-danger" style="width: 40%">G+ Login</button></a>
-<a href="{% url "social:begin" "facebook" %}"><button class="btn btn-primary" style="width: 40%">FB Login</button></a>
-
-
 {% get_providers as socialaccount_providers %}
 {% if socialaccount_providers %}
 <p>{% blocktrans with site.name as site_name %}Please sign in with one
@@ -45,5 +41,9 @@
         <a class="btn" href="{% url 'account_reset_password' %}">{% trans "비밀번호 찾기" %}</a>
     </div>
 </form>
+
+<a href="{% url "social:begin" "google-oauth2" %}"><button class="btn btn-danger" style="width: 30%">Login with Google</button></a>
+<a href="{% url "social:begin" "facebook" %}"><button class="btn btn-primary" style="width: 30%">Login with Facebook</button></a>
+<a href="{% url 'social:begin' "twitter" %}"><button class="btn btn-warning" style="width: 30%">Login with Twitter</button></a>
 
 {% endblock %}
