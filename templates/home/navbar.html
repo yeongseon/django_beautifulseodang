@@ -55,18 +55,29 @@
                         <li><a href="/apply/inquire">문의하기</a><li>
                     </ul>
                 </li>
-                <!--
-                <li><a href="/">졸업생커뮤니티</a><li>
-                -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 우리들이야기 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/"></a><li>
+                        <li><a href="/"></a><li>
+                    </ul>
+                </li>
 
+
+
+                {% if user.is_authenticated %}
+                <li><a href="logout/">로그아웃</a><li>
+                {% else %}
+                <li><a href="login/">로그인</a><li>
+                {% endif %}
+                <!--
                 {% if user.is_authenticated %}
                 <li><a href="/accounts/logout">로그아웃</a><li>
                 {% else %}
-                <!--
                 <li><a href="/accounts/signup">회원가입</a><li>
-                -->
                 <li><a href="/accounts/login">로그인</a><li>
                 {% endif %}
+                -->
         </div>
     </div>
 </nav>

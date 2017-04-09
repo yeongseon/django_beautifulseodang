@@ -1,42 +1,4 @@
 print('allauth_settings.py')
-TEMPLATE_CONTEXT_PROCESSORS = (
-    "django.core.context_processors.request",
-    "django.contrib.auth.context_processors.auth",
-    "allauth.account.context_processors.account",
-    "allauth.socialaccount.context_processors.socialaccount",
-)
-
-# Django all auth settings
-AUTHENTICATION_BACKENDS = (
-    # Needed to login by username in Django admin, regardless of `allauth`
-
-    'social_core.backends.google.GoogleOAuth2',  # Google
-    'social_core.backends.facebook.FacebookOAuth2',  # Facebook
-    'django.contrib.auth.backends.ModelBackend',
-    # `allauth` specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
-
-)
-SITE_ID = 1
-
-
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME':
-            'django.contrib.auth.password_validation.MinimumLengthValidator',
-        'OPTIONS': {
-            'min_length': 9,
-        }
-    }
-]
-
-SOCIAL_AUTH_URL_NAMESPACE = 'social'
-
-LOGIN_REDIRECT_URL = '/'
-ACCOUNT_FORMS = {
-    'login': 'home.forms.MyLoginForm',
-    'signup': 'home.forms.MySignupForm'
-}
 
 # django-allauth Configuration variables you might like to change.
 #

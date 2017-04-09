@@ -2,8 +2,8 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 from django.views.generic import TemplateView, ListView, DetailView
-from allauth.account.views import SignupView, LoginView, LogoutView
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+#from allauth.account.views import SignupView, LoginView, LogoutView
 
 from home.models import Post
 from home.models import Donation
@@ -100,6 +100,7 @@ class ApplicationView(TemplateView):
 class InquireView(TemplateView):
     template_name = 'apply/inquire.html'
 
+"""
 class SignupView(SignupView):
     template_name = 'allauth/account/signup.html'
 
@@ -108,3 +109,4 @@ class LoginView(LoginView):
 
 class LogoutView(LogoutView):
     template_name = 'allauth/account/logout.html'
+"""

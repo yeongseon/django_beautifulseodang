@@ -18,6 +18,7 @@ from home.views import HomePageView, HomePageListView, AboutView, ProfileView, \
     GreetingView, TimelineView, PeopleView, NewsView, NewsDetailView, NoticeDetailView, NoticesView, \
     ContentView, CurriculumView, FeatureView, PeriodView, PurposeView, \
     SponsorView, HowtoView, ApplicationView, InquireView
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     url(r'^$', HomePageListView.as_view(), name='home'),
@@ -43,13 +44,22 @@ urlpatterns = [
     url(r'^apply/application/', ApplicationView.as_view(), name='application'),
     url(r'^apply/inquire/', InquireView.as_view(), name='application'),
 
-    url(r'^accounts/', include('allauth.urls')),
-    url(r'^accounts/profile/$', ProfileView.as_view(), name='profile'),
-
     url(r'^admin/', include(admin.site.urls)),
-    url('', include('social_django.urls', namespace='social')),
-
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+
+
+
+    url(r'^login/$', auth_views.login, name='login'),
+    #url(r'^logout/$', auth_views.logout, name='logout'),
+    url(r'^logout/$', auth_views.logout, {'next_page': '/'}, name='logout'),
+
+    url(r'', include('social_django.urls', namespace='social')),
+    url(r'', include('social.apps.django_app.urls', namespace='social')),
+    url(r'^oauth/', include('social_django.urls', namespace='social')),
+
+    #url(r'^accounts/', include('allauth.urls')), #python-allauth
+    #url(r'^accounts/profile/$', ProfileView.as_view(), name='profile'), #python-allauth
+
 
     url(r'^', include('favicon.urls')),
 ]
