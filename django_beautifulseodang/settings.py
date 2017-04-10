@@ -19,6 +19,15 @@ from django.core.exceptions import ImproperlyConfigured
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+# Env for dev / deploy
+def get_env(setting, envs):
+    try:
+        return envs[setting]
+    except KeyError:
+        error_msg = "You SHOULD set {} environ".format(setting)
+        raise ImproperlyConfigured(error_msg)
+    return
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -64,8 +73,8 @@ INSTALLED_APPS = (
     # home
     'home',
 
-    #'social_django',
-    'social.apps.django_app.default',
+    'social_django',
+    #'social.apps.django_app.default',
 
     'django_beautifulseodang',
 )
@@ -90,7 +99,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR, 'templates', 'allauth'),
+            #os.path.join(BASE_DIR, 'templates', 'allauth'),
             os.path.join(BASE_DIR, 'templates', 'django_social_share'),
         ],
         # 'APP_DIRS': True,
@@ -106,6 +115,9 @@ TEMPLATES = [
 
                 'social_django.context_processors.backends',
                 'social_django.context_processors.login_redirect',
+
+                #'social.apps.django_app.context_processors.backends',
+                #'social.apps.django_app.context_processors.login_redirect',
             ],
             'loaders': [
                 # APP_DIRS를 주석처리 해야지 동작
@@ -115,6 +127,16 @@ TEMPLATES = [
         },
     },
 ]
+
+# Django all auth settings
+AUTHENTICATION_BACKENDS = (
+    #'social_core.backends.github.GithubOAuth2',     # Github for python-social-auth
+    'social_core.backends.twitter.TwitterOAuth',     # Twitter for python-social-auth
+    'social_core.backends.google.GoogleOAuth2',     # Google for python-social-auth
+    'social_core.backends.facebook.FacebookOAuth2', # Facebook for python-social-auth
+
+    'django.contrib.auth.backends.ModelBackend',
+)
 
 WSGI_APPLICATION = 'django_beautifulseodang.wsgi.application'
 
@@ -157,113 +179,88 @@ STATICFILES_DIRS = (
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'statics')
 
-# Env for dev / deploy
-def get_env(setting, envs):
-    try:
-        return envs[setting]
-    except KeyError:
-        error_msg = "You SHOULD set {} environ".format(setting)
-        raise ImproperlyConfigured(error_msg)
-
-    TEMPLATE_CONTEXT_PROCESSORS = (
-        "django.core.context_processors.request",
-        "django.contrib.auth.context_processors.auth",
-        "allauth.account.context_processors.account",
-        "allauth.socialaccount.context_processors.socialaccount",
-    )
-
-    # Django all auth settings
-    AUTHENTICATION_BACKENDS = (
-
-        'social_core.backends.github.GithubOAuth2',     # Github for python-social-auth
-        'social_core.backends.twitter.TwitterOAuth'          # Twitter for python-social-auth
-        'social_core.backends.google.GoogleOAuth2',     # Google for python-social-auth
-        'social_core.backends.facebook.FacebookOAuth2', # Facebook for python-social-auth
 
 
-        'django.contrib.auth.backends.ModelBackend',
-    )
+SITE_ID = 1
 
-    SITE_ID = 1
-
-    AUTH_PASSWORD_VALIDATORS = [
-        {
-            'NAME':
-                'django.contrib.auth.password_validation.MinimumLengthValidator',
-            'OPTIONS': {
-                'min_length': 9,
-            }
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME':
+            'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {
+            'min_length': 9,
         }
-    ]
-
-    SOCIAL_AUTH_PIPELINE = (
-        'social.pipeline.social_auth.social_details',
-        'social.pipeline.social_auth.social_uid',
-        'social.pipeline.social_auth.auth_allowed',
-        'social.pipeline.social_auth.social_user',
-        'social.pipeline.user.get_username',
-        'social.pipeline.user.create_user',
-        #'accounts.social.create_user',  # 덮어씀
-        #'accounts.social.update_avatar',  # 추가함
-        'social.pipeline.social_auth.associate_user',
-        'social.pipeline.social_auth.load_extra_data',
-        'social.pipeline.user.user_details'
-    )
-
-    SOCIAL_AUTH_LOGIN_REDIRECT_URL = 'home'
-    SOCIAL_AUTH_URL_NAMESPACE = 'social'
-
-    LOGIN_URL = 'login'
-    LOGOUT_URL = 'logout'
-    LOGIN_REDIRECT_URL = '/'
-
-    #ACCOUNT_FORMS = {
-    #    'login': 'home.forms.MyLoginForm',
-    #    'signup': 'home.forms.MySignupForm'
-    #}
-
-    DEV_ENVS = os.path.join(BASE_DIR, "envs_dev.json")
-    DEPLOY_ENVS = os.path.join(BASE_DIR, "envs.json")
-
-    if os.path.exists(DEV_ENVS):  # Develop Env
-        env_file = open(DEV_ENVS)
-    elif os.path.exists(DEPLOY_ENVS):  # Deploy Env
-        env_file = open(DEPLOY_ENVS)
-    else:
-        env_file = None
-
-    if env_file is None:  # System environ
-        try:
-            FACEBOOK_KEY = os.environ['FACEBOOK_KEY']
-            FACEBOOK_SECRET = os.environ['FACEBOOK_SECRET']
-            GOOGLE_KEY = os.environ['GOOGLE_KEY']
-            GOOGLE_SECRET = os.environ['GOOGLE_SECRET']
-        except KeyError as error_msg:
-            raise ImproperlyConfigured(error_msg)
-    else:  # JSON env
-        envs = json.loads(env_file.read())
-        FACEBOOK_KEY = get_env('FACEBOOK_KEY', envs)
-        FACEBOOK_SECRET = get_env('FACEBOOK_SECRET', envs)
-        GOOGLE_KEY = get_env('GOOGLE_KEY', envs)
-        GOOGLE_SECRET = get_env('GOOGLE_SECRET', envs)
-
-    # SocialLogin: Facebook
-    SOCIAL_AUTH_FACEBOOK_KEY = FACEBOOK_KEY
-    SOCIAL_AUTH_FACEBOOK_SECRET = FACEBOOK_SECRET
-    SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
-    SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
-        'fields': 'id, name, email'
     }
+]
 
-    # SocialLogin: Google
-    SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = GOOGLE_KEY
-    SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = GOOGLE_SECRET
-    SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = ['email']
+SOCIAL_AUTH_PIPELINE = (
+    'social.pipeline.social_auth.social_details',
+    'social.pipeline.social_auth.social_uid',
+    'social.pipeline.social_auth.auth_allowed',
+    'social.pipeline.social_auth.social_user',
+    'social.pipeline.user.get_username',
+    'social.pipeline.user.create_user',
+    #'accounts.social.create_user',  # 덮어씀
+    #'accounts.social.update_avatar',  # 추가함
+    'social.pipeline.social_auth.associate_user',
+    'social.pipeline.social_auth.load_extra_data',
+    'social.pipeline.user.user_details'
+)
 
-    SOCIAL_AUTH_TWITTER_KEY = 'EUQaQkvpr4R22UTNofeqIfqsV'
-    SOCIAL_AUTH_TWITTER_SECRET = 'QLjJGjCGMxkIPvGaMymAcu7zZ2GcjMxrbHqt019v5FpIs3WTB1'
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
-    SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+LOGIN_REDIRECT_URL = '/'
+
+#ACCOUNT_FORMS = {
+#    'login': 'home.forms.MyLoginForm',
+#    'signup': 'home.forms.MySignupForm'
+#}
+
+DEV_ENVS = os.path.join(BASE_DIR, "envs_dev.json")
+DEPLOY_ENVS = os.path.join(BASE_DIR, "envs.json")
+
+if os.path.exists(DEV_ENVS):  # Develop Env
+    env_file = open(DEV_ENVS)
+elif os.path.exists(DEPLOY_ENVS):  # Deploy Env
+    env_file = open(DEPLOY_ENVS)
+else:
+    env_file = None
+
+if env_file is None:  # System environ
+    try:
+        FACEBOOK_KEY = os.environ['FACEBOOK_KEY']
+        FACEBOOK_SECRET = os.environ['FACEBOOK_SECRET']
+        GOOGLE_KEY = os.environ['GOOGLE_KEY']
+        GOOGLE_SECRET = os.environ['GOOGLE_SECRET']
+    except KeyError as error_msg:
+        raise ImproperlyConfigured(error_msg)
+else:  # JSON env
+    envs = json.loads(env_file.read())
+    FACEBOOK_KEY = get_env('FACEBOOK_KEY', envs)
+    FACEBOOK_SECRET = get_env('FACEBOOK_SECRET', envs)
+    GOOGLE_KEY = get_env('GOOGLE_KEY', envs)
+    GOOGLE_SECRET = get_env('GOOGLE_SECRET', envs)
+
+# SocialLogin: Facebook
+SOCIAL_AUTH_FACEBOOK_KEY = FACEBOOK_KEY
+SOCIAL_AUTH_FACEBOOK_SECRET = FACEBOOK_SECRET
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+    'fields': 'id, name, email'
+}
+
+# SocialLogin: Google
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = GOOGLE_KEY
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = GOOGLE_SECRET
+SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = ['email']
+
+SOCIAL_AUTH_TWITTER_KEY = 'EUQaQkvpr4R22UTNofeqIfqsV'
+SOCIAL_AUTH_TWITTER_SECRET = 'QLjJGjCGMxkIPvGaMymAcu7zZ2GcjMxrbHqt019v5FpIs3WTB1'
+
+SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
 
 # favicon
 FAVICON_PATH = STATIC_URL + 'img/favicon.png'

@@ -53,9 +53,9 @@ urlpatterns = [
     #url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^logout/$', auth_views.logout, {'next_page': '/'}, name='logout'),
 
+    #url(r'', include('social.apps.django_app.urls', namespace='social')),
     url(r'', include('social_django.urls', namespace='social')),
-    url(r'', include('social.apps.django_app.urls', namespace='social')),
-    url(r'^oauth/', include('social_django.urls', namespace='social')),
+    #url(r'^oauth/', include('social.apps.django_app.urls', namespace='social')),
 
     #url(r'^accounts/', include('allauth.urls')), #python-allauth
     #url(r'^accounts/profile/$', ProfileView.as_view(), name='profile'), #python-allauth
