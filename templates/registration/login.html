@@ -1,24 +1,39 @@
 {% extends "registration/base.html" %}
 
-{% block title %}Login{% endblock %}
+{% load i18n %}
 
-{% block content %}
-<h2>Login</h2>
-{% if form.errors %}
-<p>ID나 비밀번호가 일치하지 않습니다.</p>
-{% endif %}
+{% load bootstrap %}
 
-<form method="post" action="{% url 'login' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="hidden" name="next" value="/" />
-    <button type="submit">로그인</button>
-</form>
+{% block head_title %}{% trans "로그인" %}{% endblock %}
 
-<br>
+{% block account_content %}
 
-<a href="{% url "social:begin" "google-oauth2" %}"><button class="btn btn-danger" style="width: 30%">Login with Google</button></a>
-<a href="{% url "social:begin" "facebook" %}"><button class="btn btn-primary" style="width: 30%">Login with Facebook</button></a>
-<a href="{% url "social:begin" "twitter" %}"><button class="btn btn-warning" style="width: 30%">Login with Twitter</button></a>
+<div class="container marketing">
+
+    <hr class="featurette-divider">
+
+    <h2 style="max-width: 330px;  padding: 15px;  margin: 0 auto;">{% trans "로그인" %}</h2>
+
+    {% if form.errors %}
+    <p>ID나 비밀번호가 일치하지 않습니다.</p>
+    {% endif %}
+
+    <form method="POST" action="{% url 'login' %}" style="max-width: 330px;  padding: 15px;  margin: 0 auto;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="hidden" name="next" value="/" />
+        <button class="btn btn-primary" type="submit">로그인</button>
+    </form>
+
+    <br>
+    <br>
+
+    <h2 style="max-width: 330px;  padding: 15px;  margin: 0 auto;">{% trans "소셜 로그인" %}</h2>
+    <div style="max-width: 330px;  padding: 15px;  margin: 0 auto;">
+    <a class="btn btn-danger" href="{% url "social:begin" "google-oauth2" %}"> <i class="icon-google-plus-sign icon-3x"></i> </button></a>
+    <a class="btn btn-primary" href="{% url "social:begin" "facebook" %}"> <i class="icon-facebook-sign icon-3x"></i> </a>
+    <a class="btn btn-info" href="{% url "social:begin" "twitter" %}"> <i class="icon-twitter-sign icon-3x"></i> </a>
+</div>
+</div><!-- /.container -->
 
 {% endblock %}

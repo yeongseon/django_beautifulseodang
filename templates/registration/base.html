@@ -1,9 +1,8 @@
 {% extends 'registration/bootstrap.html' %}
-
-{% load i18n %}
-
 {# Load the tag library #}
 {% load bootstrap3 %}
+{% load fontawesome %}
+{% load i18n %}
 
 {# Load CSS and JavaScript #}
 {% bootstrap_css %}
@@ -13,6 +12,10 @@
 
 {% block bootstrap3_extra_head %}
 <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+<link rel="stylesheet" type="text/css" href="/static/css/navbar.css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+{% fontawesome_stylesheet %}
 {% endblock %}
 
 {% block bootstrap3_content %}
@@ -21,24 +24,8 @@
 <div class="container marketing">
     <hr class="featurette-divider">
 
-        <!--<h1>{% trans 'My Account' %}</h1>-->
-        <!--<ul class="nav nav-tabs">-->
-        <!--<li class="{% block account_nav_email %}{% endblock %}">-->
-        <!--<a href="{% url 'account_email' %}">{% trans 'E-mail Addresses' %}</a>-->
-        <!--</li>-->
-        <!--<li class="{% block account_nav_change_password %}{% endblock %}">-->
-        <!--<a href="{% url 'account_change_password' %}">{% trans 'Change Password' %}</a>-->
-        <!--</li>-->
-        <!--{% url 'socialaccount_connections' as connections_url %}-->
-        <!--{% if connections_url %}-->
-        <!--<li class="{% block account_nav_socialaccount_connections %}{% endblock %}">-->
-        <!--<a href="{{ connections_url }}">{% trans 'Connected Accounts' %}</a>-->
-        <!--</li>-->
-        <!--{% endif %}-->
-        <!--</ul>-->
-
-        {% block account_content %} {% endblock %}
-        {% endblock %}
+    {% block account_content %} {% endblock %}
+    {% endblock %}
 
 </div>
 {% include 'home/footer.html' %}
