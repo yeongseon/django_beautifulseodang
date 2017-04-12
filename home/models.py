@@ -32,6 +32,13 @@ class News(models.Model):
     body = RichTextField(max_length=4096)
     hits = models.IntegerField(default=0, blank=True)
 
+class Prfessors(models.Model):
+    type = models.CharField(max_length=32, blank=True)
+    name = models.CharField(max_length=32, blank=True)
+    carrer = models.CharField(max_length=1024, blank=True)
+    image = models.CharField(max_length=1024, blank=True)
+
+
 class Donation(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=32)
