@@ -40,6 +40,13 @@ class People(models.Model):
     image = models.CharField(max_length=1024, blank=True)
 
 
+class Content(models.Model):
+    type = models.CharField(max_length=32, default="")
+    number = models.IntegerField()
+    name = models.CharField(primary_key=True, max_length=32, default="")
+    author = models.CharField(max_length=32, default="")
+    img = models.CharField(max_length=1024, default="")
+
 class Donation(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=32)

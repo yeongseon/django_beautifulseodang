@@ -7,7 +7,7 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 from home.models import Post
 from home.models import Donation
-from home.models import Book
+from home.models import Content
 from home.models import Notice
 from home.models import News
 from home.models import People
@@ -69,7 +69,7 @@ class NoticeDetailView(DetailView):
 
 class ContentView(ListView):
     template_name = 'education/content.html'
-    model = Book
+    model = Content
 
 class CurriculumView(TemplateView):
     template_name = 'education/curriculum.html'

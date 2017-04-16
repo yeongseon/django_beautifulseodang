@@ -31,13 +31,13 @@
                     <th width="20%">저자</th>
                 </tr>
                 <tbody>
-                {% for book in object_list %}
-                {% if book.sort == 'east' %}
+                {% for content in object_list %}
+                {% if content.type == 'east' %}
                 <tr>
-                    <td width="10%"> {{ book.id }}</td>
-                    <th width="20%"> <img src={{ book.img}} alt=""> </th>
-                    <td width="50%"> {{ book.name }}</td>
-                    <td width="20%"> {{ book.author }}</td>
+                    <td width="10%"> {{ content.id }}</td>
+                    <th width="20%"> <img src={{ content.img}} alt=""> </th>
+                    <td width="50%"> {{ content.name }}</td>
+                    <td width="20%"> {{ content.author }}</td>
                 </tr>
                 {% endif %}
                 {% endfor %}
@@ -53,12 +53,12 @@
                     <th width="20%">저자</th>
                 </tr>
                 <tbody>
-                {% for book in object_list %}
-                {% if book.sort == 'west' %}
+                {% for content in object_list %}
+                {% if content.type == 'west' %}
                 <tr>
-                    <td width="10%"> {{ book.id }}</td>
-                    <td width="70%"> {{ book.name }}</td>
-                    <td width="20%"> {{ book.author }}</td>
+                    <td width="10%"> {{ content.id }}</td>
+                    <td width="70%"> {{ content.name }}</td>
+                    <td width="20%"> {{ content.author }}</td>
                 </tr>
                 {% endif %}
                 {% endfor %}
@@ -74,12 +74,12 @@
                     <th width="20%">저자</th>
                 </tr>
                 <tbody>
-                {% for book in object_list %}
-                {% if book.sort == 'korea' %}
+                {% for content in object_list %}
+                {% if content.type == 'korea' %}
                 <tr>
-                    <td width="10%"> {{ book.id }}</td>
-                    <td width="70%"> {{ book.name }}</td>
-                    <td width="20%"> {{ book.author }}</td>
+                    <td width="10%"> {{ content.number }}</td>
+                    <td width="70%"> {{ content.name }}</td>
+                    <td width="20%"> {{ content.author }}</td>
                 </tr>
                 {% endif %}
                 {% endfor %}
@@ -95,12 +95,12 @@
                     <th width="20%">저자</th>
                 </tr>
                 <tbody>
-                {% for book in object_list %}
-                {% if book.sort == 'foreign' %}
+                {% for content in object_list %}
+                {% if content.type == 'foreign' %}
                 <tr>
-                    <td width="10%"> {{ book.id }}</td>
-                    <td width="70%"> {{ book.name }}</td>
-                    <td width="20%"> {{ book.author }}</td>
+                    <td width="10%"> {{ content.number }}</td>
+                    <td width="70%"> {{ content.name }}</td>
+                    <td width="20%"> {{ content.author }}</td>
                 </tr>
                 {% endif %}
                 {% endfor %}
@@ -116,12 +116,12 @@
                     <th width="20%">저자</th>
                 </tr>
                 <tbody>
-                {% for book in object_list %}
-                {% if book.sort == 'history' %}
+                {% for content in object_list %}
+                {% if content.type == 'history' %}
                 <tr>
-                    <td width="10%"> {{ book.id }}</td>
-                    <td width="70%"> {{ book.name }}</td>
-                    <td width="20%"> {{ book.author }}</td>
+                    <td width="10%"> {{ content.number }}</td>
+                    <td width="70%"> {{ content.name }}</td>
+                    <td width="20%"> {{ content.author }}</td>
                 </tr>
                 {% endif %}
                 {% endfor %}
@@ -137,12 +137,12 @@
                     <th width="20%">저자</th>
                 </tr>
                 <tbody>
-                {% for book in object_list %}
-                {% if book.sort == 'zeitgeist' %}
+                {% for content in object_list %}
+                {% if content.type == 'zeitgeist' %}
                 <tr>
-                    <td width="10%"> {{ book.id }}</td>
-                    <td width="70%"> {{ book.name }}</td>
-                    <td width="20%"> {{ book.author }}</td>
+                    <td width="10%"> {{ content.number }}</td>
+                    <td width="70%"> {{ content.name }}</td>
+                    <td width="20%"> {{ content.author }}</td>
                 </tr>
                 {% endif %}
                 {% endfor %}
@@ -158,12 +158,12 @@
                     <th width="20%">저자</th>
                 </tr>
                 <tbody>
-                {% for book in object_list %}
-                {% if book.sort == 'science' %}
+                {% for content in object_list %}
+                {% if content.type == 'science' %}
                 <tr>
-                    <td width="10%"> {{ book.id }}</td>
-                    <td width="70%"> {{ book.name }}</td>
-                    <td width="20%"> {{ book.author }}</td>
+                    <td width="10%"> {{ content.number }}</td>
+                    <td width="70%"> {{ content.name }}</td>
+                    <td width="20%"> {{ content.author }}</td>
                 </tr>
                 {% endif %}
                 {% endfor %}
@@ -180,7 +180,6 @@
         <div class="panel-footer panel-waring">
 
             <h3 class="text-muted"><strong>경영서 리뷰</strong></h3>
-
             <table class="table">
                 <tr>
                     <th width="10%">번호</th>
@@ -188,12 +187,89 @@
                     <th width="20%">저자</th>
                 </tr>
                 <tbody>
-                {% for book in object_list %}
-                {% if book.sort == 'business' %}
+                {% for content in object_list %}
+                {% if content.type == 'business' %}
                 <tr>
-                    <td width="10%"> {{ book.id }}</td>
-                    <td width="70%"> {{ book.name }}</td>
-                    <td width="20%"> {{ book.author }}</td>
+                    <td width="10%"> {{ content.number }}</td>
+                    <td width="70%"> {{ content.name }}</td>
+                    <td width="20%"> {{ content.author }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+            <br>
+
+            <h3 class="text-muted"><strong>한국경제이력서</strong></h3>
+            <table class="table">
+                <tr>
+                    <th width="10%">번호</th>
+                    <th width="90%">주제</th>
+                </tr>
+                <tbody>
+                {% for content in object_list %}
+                {% if content.type == 'economy' %}
+                <tr>
+                    <td width="10%"> {{ content.number }}</td>
+                    <td width="90%"> {{ content.name }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+            <br>
+
+            <h3 class="text-muted"><strong>케이스스터디</strong></h3>
+            <h4>관리과제</h4>
+            <table class="table">
+                <tr>
+                    <th width="10%">번호</th>
+                    <th width="90%">주제</th>
+                </tr>
+                <tbody>
+                {% for content in object_list %}
+                {% if content.type == 'management' %}
+                <tr>
+                    <td width="10%"> {{ content.number }}</td>
+                    <td width="90%"> {{ content.name }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+            <br>
+
+            <h4>기획과제</h4>
+            <table class="table">
+                <tr>
+                    <th width="10%">번호</th>
+                    <th width="90%">주제</th>
+                </tr>
+                <tbody>
+                {% for content in object_list %}
+                {% if content.type == 'planning' %}
+                <tr>
+                    <td width="10%"> {{ content.number }}</td>
+                    <td width="90%"> {{ content.name }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+            <br>
+
+            <h4>영업과제</h4>
+            <table class="table">
+                <tr>
+                    <th width="10%">번호</th>
+                    <th width="90%">주제</th>
+                </tr>
+                <tbody>
+                {% for content in object_list %}
+                {% if content.type == 'sales' %}
+                <tr>
+                    <td width="10%"> {{ content.number }}</td>
+                    <td width="90%"> {{ content.name }}</td>
                 </tr>
                 {% endif %}
                 {% endfor %}

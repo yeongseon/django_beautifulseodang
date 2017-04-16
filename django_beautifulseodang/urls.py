@@ -59,7 +59,5 @@ urlpatterns = [
 
     #url(r'^accounts/', include('allauth.urls')), #python-allauth
     #url(r'^accounts/profile/$', ProfileView.as_view(), name='profile'), #python-allauth
-
-
     url(r'^', include('favicon.urls')),
 ]

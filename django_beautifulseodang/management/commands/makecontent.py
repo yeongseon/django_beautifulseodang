@@ -2,7 +2,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 from django.core.management.base import BaseCommand, CommandError
-from home.models import People
+from home.models import Content
 
 class Command(BaseCommand):
     help = 'insert date to donate_db'
@@ -12,15 +12,15 @@ class Command(BaseCommand):
         creds = ServiceAccountCredentials.from_json_keyfile_name('Beautifulseodang-c0a5cc61a537.json', scope)
         client = gspread.authorize(creds)
 
-        sheet = client.open("people").sheet1
+        sheet = client.open("content").sheet1
 
-        People.objects.all().delete()
+        Content.objects.all().delete()
         i = 0
-        for _type, _name, _carrier, _region, _img in sheet.get_all_values():
+        for _type, _number, _name, _author, _img in sheet.get_all_values():
             if i == 0:
                 pass
             else:
-                print(_type, _name, _carrier, _region, _img)
-                people = People(type = _type, name = _name, carrier = _carrier, region = _region, image = _img)
-                people.save()
+                print(_type, _number, _name, _author, _img)
+                content = Content(type=_type, number=_number, name=_name, author=_author, img=_img)
+                content.save()
             i += 1
