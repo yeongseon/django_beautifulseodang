@@ -34,7 +34,7 @@
                 {% for content in object_list %}
                 {% if content.type == 'east' %}
                 <tr>
-                    <td width="10%"> {{ content.id }}</td>
+                    <td width="10%"> {{ content.number }}</td>
                     <th width="20%"> <img src={{ content.img}} alt=""> </th>
                     <td width="50%"> {{ content.name }}</td>
                     <td width="20%"> {{ content.author }}</td>
@@ -56,7 +56,7 @@
                 {% for content in object_list %}
                 {% if content.type == 'west' %}
                 <tr>
-                    <td width="10%"> {{ content.id }}</td>
+                    <td width="10%"> {{ content.number }}</td>
                     <td width="70%"> {{ content.name }}</td>
                     <td width="20%"> {{ content.author }}</td>
                 </tr>
