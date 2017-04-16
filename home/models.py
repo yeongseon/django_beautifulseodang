@@ -32,10 +32,11 @@ class News(models.Model):
     body = RichTextField(max_length=4096)
     hits = models.IntegerField(default=0, blank=True)
 
-class Prfessors(models.Model):
+class People(models.Model):
     type = models.CharField(max_length=32, blank=True)
     name = models.CharField(max_length=32, blank=True)
-    carrer = models.CharField(max_length=1024, blank=True)
+    carrier = models.CharField(max_length=1024, blank=True)
+    region = models.CharField(max_length=32, blank=True)
     image = models.CharField(max_length=1024, blank=True)
 
 

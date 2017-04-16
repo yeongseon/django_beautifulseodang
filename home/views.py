@@ -10,6 +10,7 @@ from home.models import Donation
 from home.models import Book
 from home.models import Notice
 from home.models import News
+from home.models import People
 # Create your views here.
 
 class HomePageView(TemplateView):
@@ -34,8 +35,9 @@ class GreetingView(TemplateView):
 class TimelineView(TemplateView):
     template_name = 'introduction/timeline.html'
 
-class PeopleView(TemplateView):
+class PeopleView(ListView):
     template_name = 'introduction/people.html'
+    model = People
 
 class NewsView(ListView):
     template_name = 'introduction/news.html'
