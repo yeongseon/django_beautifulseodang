@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7cdf229-a05e-4187-984c-8c569a531062" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/django_social_share/facebook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/django_social_share/google-plus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/django_social_share/twitter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/register/facebook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/register/google-plus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/register/twitter.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/django_beautifulseodang.iml" afterPath="$PROJECT_DIR$/.idea/django_beautifulseodang.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/main1.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_facebook.html" afterPath="$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_facebook.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_gplus.html" afterPath="$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_gplus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_twitter.html" afterPath="$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_twitter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/home/base.html" afterPath="$PROJECT_DIR$/templates/home/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/base.html" afterPath="$PROJECT_DIR$/templates/registration/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/login.html" afterPath="$PROJECT_DIR$/templates/registration/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/home/carousel.html" afterPath="$PROJECT_DIR$/templates/home/carousel.html" />
     </list>
     <ignored path="django_beautifulseodang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,13 +33,13 @@
     <favorites_list name="django_beautifulseodang" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.654224">
+    <splitter split-orientation="horizontal" split-proportion="0.5368803">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/home/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
+                <state relative-caret-position="1235">
                   <caret line="77" column="44" lean-forward="false" selection-start-line="77" selection-start-column="44" selection-end-line="77" selection-end-column="44" />
                   <folding>
                     <element signature="e#0#35#0" expanded="true" />
@@ -64,7 +51,7 @@
           <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/django_beautifulseodang/settings.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="380">
+                <state relative-caret-position="304">
                   <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
                   <folding>
                     <element signature="e#397#406#0" expanded="true" />
@@ -86,8 +73,8 @@
           <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="488">
-                  <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+                <state relative-caret-position="313">
+                  <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
                   <folding>
                     <element signature="n#style#0;n#h2#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#h2#1;n#div#0;n#!!top" expanded="true" />
@@ -110,21 +97,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="carousel.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="carousel.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/home/carousel.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="266">
-                  <caret line="14" column="64" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="64" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="content.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/education/content.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="621">
-                  <caret line="281" column="33" lean-forward="false" selection-start-line="281" selection-start-column="21" selection-end-line="281" selection-end-column="33" />
+                <state relative-caret-position="228">
+                  <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
@@ -134,13 +111,13 @@
             <entry file="file://$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_facebook.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="95">
-                  <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+                  <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="post_to_gplus.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="post_to_gplus.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_gplus.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="38">
@@ -163,7 +140,7 @@
           <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/django_beautifulseodang/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="575">
+                <state relative-caret-position="817">
                   <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
                   <folding />
                 </state>
@@ -174,7 +151,7 @@
             <entry file="file://$PROJECT_DIR$/templates/introduction/about.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="760">
-                  <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+                  <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -268,7 +245,6 @@
         <option value="$PROJECT_DIR$/templates/introduction/news_detail.html" />
         <option value="$PROJECT_DIR$/templates/donation/sponsor.html" />
         <option value="$PROJECT_DIR$/templates/apply/inquire.html" />
-        <option value="$PROJECT_DIR$/templates/home/carousel.html" />
         <option value="$PROJECT_DIR$/templates/introduction/news.html" />
         <option value="$PROJECT_DIR$/templates/introduction/notices.html" />
         <option value="$PROJECT_DIR$/envs.json" />
@@ -298,6 +274,7 @@
         <option value="$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_twitter.html" />
         <option value="$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_gplus.html" />
         <option value="$PROJECT_DIR$/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/templates/home/carousel.html" />
       </list>
     </option>
   </component>
@@ -310,7 +287,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
-    <option name="width" value="1932" />
+    <option name="width" value="1924" />
     <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -331,6 +308,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -598,7 +576,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -613,19 +590,19 @@
     <property name="SearchEverywhereHistoryKey" value="sett&#9;ACTION&#9;ShowSettings&#10;setting&#9;FILE&#9;file://C:/Users/Steven/PycharmProjects/django_beautifulseodang/django_beautifulseodang/settings.py&#10;find&#9;ACTION&#9;FindModal" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Steven\PycharmProjects\django_beautifulseodang\static\img\register" />
-      <recent name="C:\Users\Steven\PycharmProjects\django_beautifulseodang\static\img\django_social_share" />
-      <recent name="C:\Users\Steven\PycharmProjects\django_beautifulseodang\static\img\education\period" />
-      <recent name="C:\Users\Steven\PycharmProjects\django_beautifulseodang\templates\introduction" />
-      <recent name="C:\Users\Steven\PycharmProjects\django_beautifulseodang\templates\registration" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Steven\PycharmProjects\django_beautifulseodang\templates\registration" />
       <recent name="C:\Users\Steven\PycharmProjects\django_beautifulseodang\static\img" />
       <recent name="C:\Users\Steven\PycharmProjects\django_beautifulseodang\templates\django_social_share" />
       <recent name="C:\Users\Steven\PycharmProjects\django_beautifulseodang\templates" />
       <recent name="C:\Users\Steven\PycharmProjects\django_beautifulseodang\django_beautifulseodang" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Steven\PycharmProjects\django_beautifulseodang\static\img" />
+      <recent name="C:\Users\Steven\PycharmProjects\django_beautifulseodang\static\img\register" />
+      <recent name="C:\Users\Steven\PycharmProjects\django_beautifulseodang\static\img\django_social_share" />
+      <recent name="C:\Users\Steven\PycharmProjects\django_beautifulseodang\static\img\education\period" />
+      <recent name="C:\Users\Steven\PycharmProjects\django_beautifulseodang\templates\introduction" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -738,6 +715,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -872,10 +855,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1932" height="1048" extended-state="0" />
+    <frame x="-9" y="-9" width="1924" height="1048" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20219436" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13636364" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.49784482" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2366931" sideWeight="0.5064655" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -883,7 +866,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32579187" sideWeight="0.49568966" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53227633" sideWeight="0.49353448" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.53227633" sideWeight="0.49353448" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1137,7 +1120,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="69" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1173,23 +1155,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="779">
           <caret line="44" column="10" lean-forward="false" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/temp.txt" />
     <entry file="file://$PROJECT_DIR$/django_beautifulseodang/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
+        <state relative-caret-position="304">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="e#397#406#0" expanded="true" />
@@ -1201,13 +1173,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/home/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="1235">
           <caret line="77" column="44" lean-forward="false" selection-start-line="77" selection-start-column="44" selection-end-line="77" selection-end-column="44" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
@@ -1219,7 +1190,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1227,11 +1197,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="59" column="22" lean-forward="false" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
-          <folding>
-            <element signature="n#src#0;n#img#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#src#0;n#img#0;n#td#0;n#tr#0;n#table#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#src#0;n#img#0;n#td#0;n#tr#0;n#table#2;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1239,7 +1204,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1247,7 +1211,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="36" column="61" lean-forward="false" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1271,14 +1234,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="52" column="61" lean-forward="false" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/introduction/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1293,16 +1255,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django_beautifulseodang/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
+        <state relative-caret-position="817">
           <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home/carousel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="64" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="64" />
           <folding />
         </state>
       </provider>
@@ -1311,22 +1265,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/education/content.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="281" column="33" lean-forward="false" selection-start-line="281" selection-start-column="21" selection-end-line="281" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/django_social_share/templatetags/post_to_facebook.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1347,14 +1292,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/education/content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1077">
+          <caret line="281" column="33" lean-forward="false" selection-start-line="281" selection-start-column="21" selection-end-line="281" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        <state relative-caret-position="313">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#1;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home/carousel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
