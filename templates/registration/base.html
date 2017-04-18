@@ -8,6 +8,9 @@
 {% bootstrap_css %}
 {% bootstrap_javascript %}
 
+
+
+
 {% load static %}
 
 {% block bootstrap3_extra_head %}
@@ -19,14 +22,7 @@
 {% endblock %}
 
 {% block bootstrap3_content %}
-{% block content %}
-{% include 'home/navbar.html' %}
-<div class="container marketing">
-    <hr class="featurette-divider">
 
-    {% block account_content %} {% endblock %}
-    {% endblock %}
+{% block content %}{% endblock %}
 
-</div>
-{% include 'home/footer.html' %}
 {% endblock %}

@@ -1,12 +1,13 @@
 {% extends "registration/base.html" %}
-
-{% load i18n %}
-
 {% load bootstrap %}
+{% load fontawesome %}
+{% load i18n %}
+{% block content %}
+{% include 'home/navbar.html' %}
 
-{% block head_title %}{% trans "로그인" %}{% endblock %}
-
-{% block account_content %}
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
 
 <div class="container marketing">
 
@@ -29,11 +30,20 @@
     <br>
 
     <h2 style="max-width: 330px;  padding: 15px;  margin: 0 auto;">{% trans "소셜 로그인" %}</h2>
-    <div style="max-width: 330px;  padding: 15px;  margin: 0 auto;">
-    <a class="btn btn-danger" href="{% url "social:begin" "google-oauth2" %}"> <i class="icon-google-plus-sign icon-3x"></i> </button></a>
-    <a class="btn btn-primary" href="{% url "social:begin" "facebook" %}"> <i class="icon-facebook-sign icon-3x"></i> </a>
-    <a class="btn btn-info" href="{% url "social:begin" "twitter" %}"> <i class="icon-twitter-sign icon-3x"></i> </a>
-</div>
+    <div style="">
+        <a href="{% url "social:begin" "google-oauth2" %}">
+        <img class="icon icons8-Google-Plus" src="/static/img/register/google-plus.png" width="48" height="48">
+        </a>
+
+        <a href="{% url "social:begin" "facebook" %}">
+        <img class="icon icons8-Facebook" src="/static/img/register/facebook.png" width="48" height="48">
+        </a>
+
+        <a href="{% url "social:begin" "twitter" %}" class="btn ">
+        <img class="icon icons8-Twitter" src="/static/img/register/twitter.png" width="48" height="48">
+        </a>
+    </div>
 </div><!-- /.container -->
 
+{% include 'home/footer.html' %}
 {% endblock %}
