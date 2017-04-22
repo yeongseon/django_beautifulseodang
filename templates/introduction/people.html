@@ -21,12 +21,12 @@
     <h1>이사진</h1>
     <br>
 
-    <table class="table table-condensed">
+    <table class="borderless">
         {% for people in object_list %}
         {% if people.type == '이사' %}
         <tr class="row ">
             <td class="col-xs-4 col-sm-4 col-md-4 text-center">
-                <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="70" height="70">
+                <img class="img-circle" src="{{ people.image }}" alt="Generic placeholder image" width="70" height="70">
             </td>
             <td class="col-xs-8 col-sm-8 col-md-8">
                 <h3> {{ people.name }} </h3>
@@ -40,12 +40,12 @@
     <br>
     <h1>인문학 담당 교수</h1>
     <br>
-    <table class="table table-condensed">
+    <table class="borderless">
         {% for people in object_list %}
         {% if people.type == '인문' %}
         <tr class="row">
-            <td class="col-xs-4 col-sm-4 col-md-4 text-center">
-                <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="70" height="70">
+            <td class="col-xs-4 col-sm-4 col-md-4 align-baseline text-center">
+                <img class="img-circle" src="{{ people.image }}" alt="Generic placeholder image" width="70" height="70">
             </td>
             <td class="col-xs-8 col-sm-8 col-md-8">
                 <h3> {{ people.name }} </h3>
@@ -59,12 +59,12 @@
     <br>
     <h1>경영학 담당 교수</h1>
     <br>
-        <table class="table table-condensed">
+        <table class="borderless">
         {% for people in object_list %}
         {% if people.type == '경영' %}
-        <tr class="row">
+        <tr class="row" >
             <td class="col-xs-4 col-sm-4 col-md-4 text-center">
-                <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="70" height="70">
+                <img class="img-circle" src="{{ people.image }}" alt="Generic placeholder image" width="70" height="70">
             </td>
             <td class="col-xs-8 col-sm-8 col-md-8">
                 <h3> {{ people.name }} </h3>

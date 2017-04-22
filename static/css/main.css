@@ -35,6 +35,9 @@ body {
     background-color: #f5f5f5;
 }
 
+.borderless td, .borderless th {
+    border: none;
+}
 
 /* Custom page CSS
 -------------------------------------------------- */
